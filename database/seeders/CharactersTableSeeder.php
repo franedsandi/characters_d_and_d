@@ -20,11 +20,18 @@ class CharactersTableSeeder extends Seeder
         for($i=0; $i<10;$i++){
             $character = new Character();
             $character->name = $faker->name;
-            $character->height= $faker->$faker->randomFloat(2, 1, 999);
-            $character->weight= $faker->$faker->randomFloat(2, 1, 999999);
+            $character->height= $faker->randomFloat(2, 1, 999);
+            $character->weight= $faker->randomFloat(2, 1, 999999);
             $character->background= $faker->text();
-            $character->background= $faker->text();
-
+            $character->picture= $faker->imageUrl();
+            $character->armor_class= $faker->numberBetween(10, 20);
+            $character->for= $faker->numberBetween(3, 18);
+            $character->des= $faker->numberBetween(3, 18);
+            $character->cos= $faker->numberBetween(3, 18);
+            $character->int= $faker->numberBetween(3, 18);
+            $character->sag= $faker->numberBetween(3, 18);
+            $character->car= $faker->numberBetween(3, 18);
+            $character->save();
         }
 
     }
