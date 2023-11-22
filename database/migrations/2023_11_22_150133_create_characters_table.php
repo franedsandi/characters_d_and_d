@@ -27,6 +27,7 @@ return new class extends Migration
             $table->tinyInteger('int')->unsigned();
             $table->tinyInteger('sag')->unsigned();
             $table->tinyInteger('car')->unsigned();
+            $table->timestamps();
         });
     }
 
