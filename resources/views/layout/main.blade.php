@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-<div class="container d-flex flex-wrap justify-content-center gap-5 ">
+<div class="container d-flex flex-wrap justify-content-center gap-5 my-5">
     @yield('content')
 </div>
 </body>
