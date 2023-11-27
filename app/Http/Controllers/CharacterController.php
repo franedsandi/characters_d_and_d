@@ -14,7 +14,7 @@ class CharacterController extends Controller
      */
     public function index()
     {
-        $characters = Character::orderBy('id', 'desc')->get();
+        $characters = Character::orderBy('id', 'desc')->paginate(4);
         return view('characters.index', compact('characters'));
     }
 
@@ -63,6 +63,7 @@ class CharacterController extends Controller
     public function edit(Character $character)
     {
         return view('Characters.edit', compact('character'));
+
     }
 
     /**
@@ -72,9 +73,11 @@ class CharacterController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Character $character)
     {
-        //
+        $form_data = $request->all();
+        $character->update($form_data);
+        return redirect()->route('characters.show', $character);
     }
 
     /**

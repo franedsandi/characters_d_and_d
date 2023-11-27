@@ -1,1 +1,19 @@
 @import '~bootstrap/scss/bootstrap';
+
+header{
+    background-color: rgb(31, 20, 0);
+    position:fixed;
+    height: 80px;
+    width: 100%;
+}
+main{
+    padding-top: 80px;
+    overflow: auto;
+    height: calc(100vh - 30px);
+}
+footer{
+    background-color: rgb(31, 20, 0);
+    height: 30px;
+    width: 100%;
+    color: white;
+}

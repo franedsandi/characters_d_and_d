@@ -12,8 +12,11 @@
 </head>
 <body>
     @include('partials.header')
-<div class="container d-flex flex-wrap justify-content-center gap-5 my-5">
-    @yield('content')
-</div>
+<main>
+    <div class="container">
+        @yield('content')
+    </div>
+</main>
+    @include('partials.footer')
 </body>
 </html>

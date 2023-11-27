@@ -15,8 +15,10 @@
       <p class="card-text">SAG: {{$character->sag}}</p>
       <p class="card-text">CAR: {{$character->car}}</p>
     </div>
-    @include('partials.edit_boton')
-    @include('partials.delete_boton')
+    <div class="d-flex justify-content-center gap-3">
+        @include('partials.edit_boton')
+        @include('partials.delete_boton')
+    </div>
   </div>
 
 

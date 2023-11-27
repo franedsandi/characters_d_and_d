@@ -6,7 +6,7 @@
     {{session('deleted')}}
   </div>
 @endif
-
+<div class="container d-flex flex-wrap gap-3 my-3">
 @foreach ($characters as $character)
     <div class="card p-3" style="width: 18rem;">
         <img src="{{$character->picture}}" class="card-img-top" alt="{{$character->name}}">
@@ -31,4 +31,6 @@
       </div>
 
     @endforeach
+</div>
+    {{$characters->links()}}
 @endsection
