@@ -16,6 +16,7 @@
       <p class="card-text">CAR: {{$character->car}}</p>
     </div>
     @include('partials.edit_boton')
+    @include('partials.delete_boton')
   </div>
 
 

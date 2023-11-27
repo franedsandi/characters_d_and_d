@@ -1,9 +1,14 @@
 @extends('layout.main')
 
 @section('content')
+@if (session('deleted'))
+<div class="alert alert-danger" role="alert">
+    {{session('deleted')}}
+  </div>
+@endif
 
 @foreach ($characters as $character)
-    <div class="card" style="width: 18rem;">
+    <div class="card p-3" style="width: 18rem;">
         <img src="{{$character->picture}}" class="card-img-top" alt="{{$character->name}}">
         <div class="card-body">
           <h5 class="card-title">{{$character->name}}</h5>
@@ -18,8 +23,11 @@
           <p class="card-text">SAG: {{$character->sag}}</p>
           <p class="card-text">CAR: {{$character->car}}</p>
         </div>
-        @include('partials.show_button')
-        @include('partials.edit_boton')
+        <div class="d-flex gap-2 justify-content-center">
+            @include('partials.show_button')
+            @include('partials.edit_boton')
+            @include('partials.delete_boton')
+        </div>
       </div>
 
     @endforeach

@@ -18,7 +18,7 @@
     </div>
     <div class="mb-3">
         <label for="background" class="form-label">Background</label>
-        <textarea type="text" class="form-control" id="background" name="background" rows="3">{{$character->background}}
+        <textarea type="text" class="form-control" id="background" name="background" rows="3"></textarea>{{$character->background}}
         </textarea>
     </div>
     <div class="mb-3">
