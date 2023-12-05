@@ -1,8 +1,8 @@
 @extends('layout.main')
 @section('content')
-<div class="card" style="width: 18rem;">
-    <img src="{{$character->picture}}" class="card-img-top" alt="{{$character->name}}">
-    <div class="card-body">
+<div>
+    <img src="{{$character->picture}}" alt="{{$character->name}}" width="400px">
+    <div>
       <h5 class="card-title">{{$character->name}}</h5>
       <p class="card-text">HEIGHT: {{$character->height}}mts</p>
       <p class="card-text">WEIGHT: {{$character->weight}} Kg</p>
