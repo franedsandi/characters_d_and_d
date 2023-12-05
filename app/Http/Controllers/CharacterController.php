@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\Character;
+use App\Http\Requests\CharacterRequest;
+use Illuminate\Validation\Validator;
 
 class CharacterController extends Controller
 {
@@ -34,7 +38,7 @@ class CharacterController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CharacterRequest $request)
     {
         $form_data = $request->all();
         $new_character = new Character();
@@ -73,7 +77,7 @@ class CharacterController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Character $character)
+    public function update(CharacterRequest $request, Character $character)
     {
         $form_data = $request->all();
         $character->update($form_data);
