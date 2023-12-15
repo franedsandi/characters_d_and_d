@@ -14,10 +14,16 @@
         <p class="card-text">INT: {{$character->int}}</p>
         <p class="card-text">SAG: {{$character->sag}}</p>
         <p class="card-text">CAR: {{$character->car}}</p>
+        <p class="card-text">Skills:</p>
+        <ul>
+            @foreach ($character->skills as $skill)
+                <li>{{ $skill['name'] }}</li>
+            @endforeach
+        </ul>
     </div>
     <div class="d-flex justify-content-center gap-3">
-        @include('partials.edit_boton')
-        @include('partials.delete_boton')
+        @include('partials.edit_boton', ['route' => route('characters.edit', $character)])
+        @include('partials.delete_boton', ['route' => route('characters.destroy', $character)])
     </div>
 </div>
 

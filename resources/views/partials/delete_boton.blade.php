@@ -1,5 +1,5 @@
 <form
-action="{{route('characters.destroy', $character) }}"
+action="{{$route}}"
 method="Post"
 onsubmit="return confirm('Are you sure you want to DELETE the character: {{$character->name}}')">
 

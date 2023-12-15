@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Models\Character;
 use App\Http\Requests\CharacterRequest;
 use Illuminate\Validation\Validator;
+use App\Models\Skill;
+
 
 class CharacterController extends Controller
 {

@@ -9,8 +9,8 @@
         <h5 class="card-title">{{$race->name}}</h5>
         <p class="card-text">{{$race->description}}</p>
         @include('partials.show_button', ['route' => route('races.show', $race)])
-        
-        <a class="btn btn-outline-success" href="{{route('character-races', $race) }}"><i class="fa-solid fa-eye"></i></a>
+        @include('partials.characters_race_btn', ['route' => route('character-races', $race)])
+
     </div>
 </div>
 
