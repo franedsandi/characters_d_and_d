@@ -1,5 +1,1 @@
-<a
-class="btn btn-outline-warning"
-href="{{route('characters.show', $character) }}">
-    <i class="fa-solid fa-circle-info"></i>
-</a>
+<a class="btn btn-outline-success" href="{{ $route }}"><i class="fa-solid fa-eye"></i></a>

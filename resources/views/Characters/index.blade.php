@@ -24,7 +24,7 @@
           <p class="card-text">CAR: {{$character->car}}</p>
         </div>
         <div class="d-flex gap-2 justify-content-center">
-            @include('partials.show_button')
+            @include('partials.show_button', ['route' => route('characters.show', $character)])
             @include('partials.edit_boton')
             @include('partials.delete_boton')
         </div>

@@ -9,7 +9,7 @@ use App\Models\Character;
 class PageController extends Controller
 {
     public function index(){
-        $characters = Character::all();
+        $characters = Character::All();
         return view('home', compact('characters'));
         }
 }

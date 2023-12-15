@@ -3,6 +3,7 @@
       <li class="nav-item"><a href="{{Route('home')}}" class="nav-link active" aria-current="page">Home</a></li>
       <li class="nav-item"><a href="{{Route('characters.index')}}" class="nav-link active" aria-current="page">Character List</a></li>
       <li class="nav-item"><a href="{{Route('characters.create')}}" class="nav-link active" aria-current="page">Make your own character</a></li>
+      <li class="nav-item"><a href="{{Route('races.index')}}" class="nav-link active" aria-current="page">Races list</a></li>
 
     </ul>
   </header>

@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
             RacesTableSeeder::class,
             SkillsTableSeeder::class,
             CharactersTableSeeder::class,
+            CharacterSkillTableSeeder::class,
         ]);
     }
 }

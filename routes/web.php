@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Guest\PageController;
 use App\Http\Controllers\CharacterController;
+use App\Http\Controllers\RaceController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +19,5 @@ use App\Http\Controllers\CharacterController;
 
 Route::get('/', [PageController::class, 'index'])->name('home');
 Route::resource('characters', CharacterController::class);
+Route::resource('races', RaceController::class);
+Route::get('/character-races', [RaceController::class, 'characterRaces'])->name('character-races');

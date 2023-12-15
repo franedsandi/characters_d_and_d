@@ -11,6 +11,9 @@ class Character extends Model
     public function race(){
         return $this->belongsTo(Race::class);
     }
+    public function skills(){
+        return $this->belongsToMany(Skill::class);
+    }
 
     protected $fillable = [
         'name',

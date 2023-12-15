@@ -13,7 +13,7 @@
 <body>
     @include('partials.header')
 <main>
-    <div class="container py-5"></div>
+    <div class="container py-5 px-5">
         @yield('content')
     </div>
 </main>
