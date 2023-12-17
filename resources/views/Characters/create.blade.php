@@ -1,8 +1,8 @@
 @extends('layout.main')
 
 @section('content')
-<div class="my-3">
-    <form action="{{route('characters.store')}}" method="POST">
+<div class="my-3 d-flex justify-content-center ">
+    <form class="text-warning fw-semibold w-50" action="{{route('characters.store')}}" method="POST">
     @csrf
         <div class="mb-3">
             <label for="Name" class="form-label">Name</label>
