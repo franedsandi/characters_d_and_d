@@ -1,0 +1,16 @@
+.character.image {
+    border-radius: 10px;
+    overflow: hidden;
+    &:hover {
+        opacity: .9;
+    }
+}
+
+
+.character.card {
+    background-color: rgba($color: #111111, $alpha: .7);
+    cursor: pointer;
+    &:hover {
+        scale: 1.1;
+    }
+}

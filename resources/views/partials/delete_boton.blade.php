@@ -5,5 +5,5 @@ onsubmit="return confirm('Are you sure you want to DELETE the character: {{$char
 
     @csrf
     @method('DELETE')
-    <button type="submit" class="btn btn-outline-danger"><i class="fa-solid fa-trash-can"></i></button>
+    <button type="submit" class="btn btn-light"><i class="fa-solid fa-trash-can"></i></button>
 </form>
