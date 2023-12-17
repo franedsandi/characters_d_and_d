@@ -8,6 +8,7 @@
 @endif
 <div class="container d-flex flex-wrap gap-2 my-3 justify-content-center">
 @foreach ($characters as $character)
+  {{--  a card-link to show the character --}}
     <a class="text-decoration-none text-white h-100" href="{{ route('characters.show', $character)}}">
         <div class="card character p-2 text-white" style="width: 17rem;">
             <img src="{{$character->picture}}" class="card-img-top" alt="{{$character->name}}">
