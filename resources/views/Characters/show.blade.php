@@ -1,9 +1,13 @@
 @extends('layout.main')
+
 @section('content')
-<div >
-    <img src="{{$character->picture}}" alt="{{$character->name}}" width="400px">
-    <div>
-        <h5 class="card-title">{{$character->name}}</h5>
+
+<div class="text-white">
+    <div class="character image">
+        <img src="{{$character->picture}}" alt="{{$character->name}}" width="400px">
+    </div>
+    <div class="py-2">
+        <h4 class="card-title py-3">{{$character->name}}</h4>
         <p class="card-text">HEIGHT: {{$character->height}}mts</p>
         <p class="card-text">WEIGHT: {{$character->weight}} Kg</p>
         <p class="card-text">STORY: {{$character->background}}</p>
