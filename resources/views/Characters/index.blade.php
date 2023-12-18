@@ -4,9 +4,9 @@
 @if (session('deleted'))
 <div class="alert alert-danger" role="alert">
     {{session('deleted')}}
-  </div>
+</div>
 @endif
-<div class="container d-flex flex-wrap gap-2 my-3 justify-content-center">
+<div class=" d-flex flex-wrap gap-2 my-3 justify-content-center">
 @foreach ($characters as $character)
   {{--  a card-link to show the character --}}
     <a class="text-decoration-none text-white h-100" href="{{ route('characters.show', $character)}}">
@@ -28,5 +28,7 @@
 
     @endforeach
 </div>
+<div class="mt-5">
     {{$characters->links()}}
+</div>
 @endsection
