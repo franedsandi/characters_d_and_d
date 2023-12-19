@@ -12,4 +12,16 @@ class Race extends Model
     public function characters(){
         return $this->hasMany(Character::class);
     }
+
+
+    protected $fillable = [
+        'name',
+        'description',
+        'mod_for',
+        'mod_des',
+        'mod_cos',
+        'mod_int',
+        'mod_sag',
+        'mod_car'
+    ];
 }
