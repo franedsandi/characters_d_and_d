@@ -95,6 +95,6 @@ class CharacterController extends Controller
     public function destroy(Character $character)
     {
         $character->delete();
-        return redirect()->route('characters.index')->with('deleted', "The Character $character->name have been deleted successfully");
+        return redirect()->route('characters.index')->with('deleted', "The Character $character->name have been deleted successfully and you have been automaticaly redirected to the general characters list");
     }
 }
