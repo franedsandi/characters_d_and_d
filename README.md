@@ -59,3 +59,13 @@ To fix the issue you can:
 - rename the vite.config.js file to `vite.config.cjs`
 
 **please note** this is a temporary solution as in both cases, remove the type:module or renaming the vite config file could trigger other issues. If you face any problem please report it [here](https://github.com/fabiopacificicom/laravel-9-preset/issues)
+
+
+### To do
+-una seed per la db con dati reali dei characters, skills, races 
+-La page di tutti i personaggi appartenenti a una stessa razza
+-mod del create e update dei personaggi per aggiungere razza e skills
+-Login(quando l'utente fa log in solo vede i suoi personaggi)
+-Magari una search bar per cercare i personaggi del utente
+-Il Contataci perché meh perché no? Ci sta 🤣
+
