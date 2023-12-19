@@ -17,7 +17,7 @@ $characters = [
         'car' => 12,
     ],
     [
-        'name' => 'Elyndor Swiftwind',
+    'name' => 'Elyndor Swiftwind',
     'race_id' => 2,
     'height' => 1.85,
     'weight' => 65,
