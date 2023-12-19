@@ -66,6 +66,7 @@ To fix the issue you can:
 
 Back end:
 -una seed per la db con dati reali dei characters, skills, races; (fatto array dei characters, da implementare)
+-crud skills e crud races
 -La page di tutti i personaggi appartenenti a una stessa razza; (GIA FATTO)
 -modifica del create e update dei personaggi per aggiungere razza (FATTO) e skills (DA FARE);
 -Login(quando l'utente fa log in solo vede i suoi personaggi);
@@ -78,14 +79,5 @@ Front end:
 -Aggiungere funzione search per trovare i personaggi;
 -Pagina dove si può estrarre un personaggio casuale per giocare cliccando un d20;
 
-
-
-### things to do
--una seed per la db con dati reali dei characters, skills, races 
--La page di tutti i personaggi appartenenti a una stessa razza
--mod del create e update dei personaggi per aggiungere razza e skills
--Login(quando l'utente fa log in solo vede i suoi personaggi)
--Magari una search bar per cercare i personaggi del utente
--Il Contataci perché meh perché no? Ci sta 🤣
-
-
+### to fix
+    image size on index characters
