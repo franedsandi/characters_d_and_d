@@ -64,7 +64,7 @@ To fix the issue you can:
 ### To do
 
 Back end:
--una seed per la db con dati reali dei characters, skills, races;
+-una seed per la db con dati reali dei characters, skills, races; (fatto array dei characters, da implementare)
 -La page di tutti i personaggi appartenenti a una stessa razza; (GIA FATTO)
 -modifica del create e update dei personaggi per aggiungere razza e skills;
 -Login(quando l'utente fa log in solo vede i suoi personaggi);
