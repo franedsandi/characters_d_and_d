@@ -2,7 +2,7 @@
 
 @section('content')
 <h1>Those are all the characters of the race {{$race->name}}</h1>
-<div class="d-flex flex-wrap gap-2 my-3 justify-content-center">
+<div class="d-flex flex-wrap gap-2 mt-5 justify-content-center">
     @foreach ($characters as $character)
         <a class="text-decoration-none text-white h-100" href="{{ route('characters.show', $character) }}">
             <div class="card item p-2 text-white" style="width: 17rem;">
