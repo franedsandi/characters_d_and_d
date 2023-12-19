@@ -49,6 +49,7 @@ Install the package as described in the documentation above, no issues have been
 
 ### From Laravel v.10.10 and up
 
+
 When you install the package following the documentation above and then run `npm run dev` it returns an error due to a `require('path')` used in the `vite.config.js file`.
 
 > If require('path') is replaced with `import path from 'path'` the dev server will return another error, mentioning the laravel() function being undefined. So, the import statement can be updated or not, it won't fix the issue.
@@ -61,6 +62,24 @@ To fix the issue you can:
 **please note** this is a temporary solution as in both cases, remove the type:module or renaming the vite config file could trigger other issues. If you face any problem please report it [here](https://github.com/fabiopacificicom/laravel-9-preset/issues)
 
 
+### To do
+
+Back end:
+-una seed per la db con dati reali dei characters, skills, races; (fatto array dei characters, da implementare)
+-La page di tutti i personaggi appartenenti a una stessa razza; (GIA FATTO)
+-modifica del create e update dei personaggi per aggiungere razza e skills;
+-Login(quando l'utente fa log in solo vede i suoi personaggi);
+-Magari una search bar per cercare i personaggi del utente;
+-Il form Contattaci perché meh perché no? Ci sta 🤣;
+
+Front end:
+-tramite API recuperare la lista personaggi + pagina di ogni singolo personaggio.
+-Pagina dove si vede la lista personaggi;
+-Aggiungere funzione search per trovare i personaggi;
+-Pagina dove si può estrarre un personaggio casuale per giocare cliccando un d20;
+
+
+
 ### things to do
 -una seed per la db con dati reali dei characters, skills, races 
 -La page di tutti i personaggi appartenenti a una stessa razza
@@ -68,4 +87,5 @@ To fix the issue you can:
 -Login(quando l'utente fa log in solo vede i suoi personaggi)
 -Magari una search bar per cercare i personaggi del utente
 -Il Contataci perché meh perché no? Ci sta 🤣
+
 

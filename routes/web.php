@@ -20,5 +20,5 @@ use App\Http\Controllers\RaceController;
 Route::get('/', [PageController::class, 'index'])->name('home');
 Route::resource('characters', CharacterController::class);
 Route::resource('races', RaceController::class);
-Route::get('/character-races', [RaceController::class, 'characterRaces'])->name('character-races');
+Route::get('/character-races/{race}', [RaceController::class, 'characterRaces'])->name('character-races');
 
