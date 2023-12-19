@@ -2,31 +2,30 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Str;
 use App\Models\Race;
-use Faker\Generator as Faker;
 
 class RacesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
-    public function run(Faker $faker): void
+    public function run()
     {
-        $data = ['Druid','Elf','Human','Gnome','Dwarf','Orc','Drow'];
-        foreach($data as $race){
-            $new_race=new Race();
-            $new_race->name = $race;
-            $new_race->description = $faker->text();
-            $new_race->mod_for= $faker->numberBetween(-3, 3);
-            $new_race->mod_des= $faker->numberBetween(-3, 3);
-            $new_race->mod_cos= $faker->numberBetween(-3, 3);
-            $new_race->mod_int= $faker->numberBetween(-3, 3);
-            $new_race->mod_sag= $faker->numberBetween(-3, 3);
-            $new_race->mod_car= $faker->numberBetween(-3, 3);
-            $new_race->save();
+        $racesData = include(base_path('database/seeders/races_data.php'));
+
+        foreach ($races as $raceData) {
+            $race = new Race();
+            $race->name = $raceData['name'];
+            $race->description = $raceData['description'];
+            $race->picture = $raceData['picture'];
+            $race->mod_for = $raceData['mod_for'];
+            $race->mod_des = $raceData['mod_des'];
+            $race->mod_cos = $raceData['mod_cos'];
+            $race->mod_int = $raceData['mod_int'];
+            $race->mod_sag = $raceData['mod_sag'];
+            $race->mod_car = $raceData['mod_car'];
+            $race->save();
         }
     }
 }
