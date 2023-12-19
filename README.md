@@ -62,10 +62,20 @@ To fix the issue you can:
 
 
 ### To do
--una seed per la db con dati reali dei characters, skills, races 
--La page di tutti i personaggi appartenenti a una stessa razza
--mod del create e update dei personaggi per aggiungere razza e skills
--Login(quando l'utente fa log in solo vede i suoi personaggi)
--Magari una search bar per cercare i personaggi del utente
--Il Contataci perché meh perché no? Ci sta 🤣
+
+Back end:
+-una seed per la db con dati reali dei characters, skills, races;
+-La page di tutti i personaggi appartenenti a una stessa razza;
+-modifica del create e update dei personaggi per aggiungere razza e skills;
+-Login(quando l'utente fa log in solo vede i suoi personaggi);
+-Magari una search bar per cercare i personaggi del utente;
+-Il form Contattaci perché meh perché no? Ci sta 🤣;
+
+Front end:
+-tramite API recuperare la lista personaggi + pagina di ogni singolo personaggio.
+-Pagina dove si vede la lista personaggi;
+-Aggiungere funzione search per trovare i personaggi;
+-Pagina dove si può estrarre un personaggio casuale per giocare cliccando un d20;
+
+
 
