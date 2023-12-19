@@ -13,6 +13,17 @@
             @enderror
         </div>
         <div class="mb-3">
+            <label for="race_id" class="form-label">Project Type</label>
+            <select class="form-control" id="race_id" name="race_id">
+                <option value="">Select Type</option>
+                @foreach ($races as $race)
+                    <option value="{{ $race->id }}" {{ $character->race_id == $race->id ? 'selected' : '' }}>
+                        {{ $race->name }}
+                    </option>
+                @endforeach
+            </select>
+        </div>
+        <div class="mb-3">
             <label for="height" class="form-label">Height</label>
             <input type="number" step="0.01" class="form-control" id="height" name="height" value="{{old('height', $character->height)}}">
             @error('height')
@@ -49,42 +60,42 @@
             @enderror
         </div>
         <div class="mb-3">
-            <label for="for" class="form-label">For</label>
+            <label for="for" class="form-label">Strength</label>
             <input type="number" class="form-control" id="for" name="for" value="{{old('for', $character->for)}}">
             @error('for')
             <p class="text-danger fw-bold">{{ $message }}</p>
             @enderror
         </div>
         <div class="mb-3">
-            <label for="des" class="form-label">Des</label>
+            <label for="des" class="form-label">Dexterity</label>
             <input type="number" class="form-control" id="des" name="des" value="{{old('for', $character->for)}}">
             @error('des')
             <p class="text-danger fw-bold">{{ $message }}</p>
             @enderror
         </div>
         <div class="mb-3">
-            <label for="cos" class="form-label">Cos</label>
+            <label for="cos" class="form-label">Constitution</label>
             <input type="number" class="form-control" id="cos" name="cos" value="{{old('for', $character->cos)}}">
             @error('cos')
             <p class="text-danger fw-bold">{{ $message }}</p>
             @enderror
         </div>
         <div class="mb-3">
-            <label for="int" class="form-label">Int</label>
+            <label for="int" class="form-label">Intelligence</label>
             <input type="number" class="form-control" id="int" name="int" value="{{old('for', $character->int)}}">
             @error('int')
             <p class="text-danger fw-bold">{{ $message }}</p>
             @enderror
         </div>
         <div class="mb-3">
-            <label for="sag" class="form-label">Sag</label>
+            <label for="sag" class="form-label">Wisdom</label>
             <input type="number" class="form-control" id="sag" name="sag" value="{{old('for', $character->sag)}}">
             @error('sag')
             <p class="text-danger fw-bold">{{ $message }}</p>
             @enderror
         </div>
         <div class="mb-3">
-            <label for="car" class="form-label">Car</label>
+            <label for="car" class="form-label">Charisma</label>
             <input type="number" class="form-control" id="car" name="car" value="{{old('for', $character->car)}}">
             @error('car')
             <p class="text-danger fw-bold">{{ $message }}</p>

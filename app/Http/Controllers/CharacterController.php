@@ -9,6 +9,7 @@ use App\Models\Character;
 use App\Http\Requests\CharacterRequest;
 use Illuminate\Validation\Validator;
 use App\Models\Skill;
+use App\Models\Race;
 
 
 class CharacterController extends Controller
@@ -31,7 +32,8 @@ class CharacterController extends Controller
      */
     public function create()
     {
-        return view('Characters.create');
+        $races=Race::all();
+        return view('Characters.create',compact('races'));
     }
 
     /**
@@ -68,8 +70,9 @@ class CharacterController extends Controller
      */
     public function edit(Character $character)
     {
-        return view('Characters.edit', compact('character'));
+        $races = Race::all();
 
+        return view('Characters.edit', compact('character', 'races'));
     }
 
     /**
@@ -83,7 +86,9 @@ class CharacterController extends Controller
     {
         $form_data = $request->all();
         $character->update($form_data);
-        return redirect()->route('characters.show', $character);
+        $races = Race::all();
+
+        return redirect()->route('characters.show', compact('character', 'races'));
     }
 
     /**

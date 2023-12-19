@@ -11,10 +11,11 @@
 
 @foreach ($characters as $character)
     <a class="text-decoration-none text-white h-100" href="{{ route('characters.show', $character)}}">
-        <div class="card item p-2 text-white" style="width: 17rem;">
+        <div class="card item p-2 text-white my-4" style="width: 17rem;">
             <img src="{{$character->picture}}" class="card-img-top" alt="{{$character->name}}">
             <div class="card-body">
-                <h5 class="card-title">{{$character->name}}</h5>
+                <h3 class="card-title">{{$character->name}}</h3>
+                <h4>{{$character->race['name']}}</h4>
                 <p class="card-text">HEIGHT: {{$character->height}}mts</p>
                 <p class="card-text">WEIGHT: {{$character->weight}} Kg</p>
                 <p class="card-text">STORY: {{$character->background}}</p>
