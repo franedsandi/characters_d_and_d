@@ -1,5 +1,7 @@
 <?php
 
+// this is the default array of characters
+
 $characters = [
     [
         'name' => 'Lorelei Moonshadow',
