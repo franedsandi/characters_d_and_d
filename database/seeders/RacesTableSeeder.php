@@ -18,7 +18,7 @@ class RacesTableSeeder extends Seeder
             $race = new Race();
             $race->name = $raceData['name'];
             $race->description = $raceData['description'];
-            $race->picture = $raceData['picture'];
+            
             $race->mod_for = $raceData['mod_for'];
             $race->mod_des = $raceData['mod_des'];
             $race->mod_cos = $raceData['mod_cos'];

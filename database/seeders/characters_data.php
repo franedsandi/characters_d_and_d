@@ -3,7 +3,7 @@
 $characters = [
     [
         'name' => 'Lorelei Moonshadow',
-        'race_id' => 1, 
+        'race_id' => 1,
         'height' => 1.75,
         'weight' => 70,
         'background' => 'Lorelei, a devoted follower of nature, grew up deep in the heart of the enchanted forest of Eldwood. From a young age, she communicated with the spirits of the land and animals, developing a profound connection to the natural world. Guided by the balance of life, she embarked on a journey to preserve the harmony between civilization and the wilderness.',
