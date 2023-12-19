@@ -6,7 +6,9 @@
     {{session('deleted')}}
 </div>
 @endif
-<div class="d-flex flex-wrap gap-2 my-3 justify-content-center">
+
+<div class=" d-flex flex-wrap gap-2 my-3 justify-content-center">
+
 @foreach ($characters as $character)
     <a class="text-decoration-none text-white h-100" href="{{ route('characters.show', $character)}}">
         <div class="card item p-2 text-white" style="width: 17rem;">
@@ -27,8 +29,10 @@
 
     @endforeach
 </div>
+
 <div class="mt-5 d-flex justify-content-center" style="color: white">
     {{$characters->links()}}
 </div>
+
 
 @endsection
