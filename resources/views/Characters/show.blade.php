@@ -7,7 +7,8 @@
         <img src="{{$character->picture}}" alt="{{$character->name}}" width="400px">
     </div>
     <div class="py-2">
-        <h4 class="card-title py-3">{{$character->name}}</h4>
+        <h1 class="card-title py-3">{{$character->name}}</h1>
+        <h2>{{$character->race['name']}}</h2>
         <p class="card-text">HEIGHT: {{$character->height}}mts</p>
         <p class="card-text">WEIGHT: {{$character->weight}} Kg</p>
         <p class="card-text">STORY: {{$character->background}}</p>

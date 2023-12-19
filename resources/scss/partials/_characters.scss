@@ -1,16 +1,20 @@
-.item.image {
-    border-radius: 10px;
-    overflow: hidden;
-    &:hover {
-        opacity: .9;
+.item{
+    .card-img-top {
+        border-radius: 10%;
+        box-shadow: 0px 0px 30px 10px rgba(87, 65, 6, 0.575);
+        height: 25vw;
+        width:25vw;
+        object-fit: cover;
+        overflow: hidden;
+        &:hover {
+            opacity: .9;
+        }
     }
-}
-
-
-.item.card {
-    background-color: rgba($color: #111111, $alpha: .7);
-    cursor: pointer;
-    &:hover {
-        scale: 1.1;
+    &.card{
+        background-color: rgba($color: #111111, $alpha: .7);
+        cursor: pointer;
+        &:hover {
+            scale: 1.1;
+        }
     }
 }
