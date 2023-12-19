@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\Race;
+use App\Models\Character;
 
 
 class RaceController extends Controller
@@ -13,18 +14,18 @@ class RaceController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function characterRaces(){
-        $races = Race::all();
-        return view('races.character_race', compact('races'));
 
-}
 
     public function index()
     {
-        $races = Race::all();
+        $races = Race::orderBy('id', 'desc')->paginate(8);
         return view('races.index', compact('races'));
     }
 
+    public function characterRaces(Race $race) {
+        $characters = $race->characters()->orderBy('id', 'desc')->paginate(4);
+        return view('races.character_race', compact('race', 'characters'));
+    }
     /**
      * Show the form for creating a new resource.
      */

@@ -2,10 +2,18 @@ body {
     font-family: 'Roboto', sans-serif;
     background-image: url('/d-e-d-background.jpg');
     background-position: center;
-
     }
 
 .container {
     background-color: rgba($color: #000000, $alpha: .5);
+    color: white;
     border-radius: 15px;
+}
+.card-body{
+    flex-direction: column;
+    align-items: center;
+    
+    .buttons{
+
+    }
 }

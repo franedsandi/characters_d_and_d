@@ -1,4 +1,4 @@
-.character.image {
+.item.image {
     border-radius: 10px;
     overflow: hidden;
     &:hover {
@@ -7,7 +7,7 @@
 }
 
 
-.character.card {
+.item.card {
     background-color: rgba($color: #111111, $alpha: .7);
     cursor: pointer;
     &:hover {
