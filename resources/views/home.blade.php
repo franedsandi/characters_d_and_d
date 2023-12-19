@@ -8,9 +8,9 @@
     <button type="button" class="btn btn-warning">
         <a href="{{Route('characters.index')}}" class="nav-link active" aria-current="page">Character List</a>
     </button>
-    <button type="button" class="btn btn-success">
-        <a href="{{Route('characters.create')}}" class="nav-link active" aria-current="page">Make your own character</a>
-    </button>
+    {{-- make character  --}}
+    @include('partials.create_boton', ['route' => route('characters.create'), 'add' => 'Make your own character'] )
+
 
 
 @endsection
