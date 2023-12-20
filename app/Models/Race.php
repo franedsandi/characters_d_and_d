@@ -13,7 +13,6 @@ class Race extends Model
         return $this->hasMany(Character::class);
     }
 
-
     protected $fillable = [
         'name',
         'description',
@@ -24,4 +23,18 @@ class Race extends Model
         'mod_sag',
         'mod_car'
     ];
+
+    public static function generateSlug($name){
+        $slug = Str::slug($name, "-");
+        $original_slug = $slug;
+        $exists = Race::where("slug", $slug)->first();
+        $c = 1;
+        while($exists){
+            $slug = $original_slug . "-" . $c;
+            $exists = Race::where("slug", $slug)->first();
+
+            $c++;
+        }
+        return $slug;
+    }
 }

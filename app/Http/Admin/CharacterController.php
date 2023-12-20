@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
@@ -22,7 +22,7 @@ class CharacterController extends Controller
     public function index()
     {
         $characters = Character::orderBy('id', 'desc')->paginate(4);
-        return view('characters.index', compact('characters'));
+        return view('admin.Characters.index', compact('characters'));
     }
 
     /**
@@ -32,8 +32,10 @@ class CharacterController extends Controller
      */
     public function create()
     {
+        $character= new Character();
         $races=Race::all();
-        return view('Characters.create',compact('races'));
+        $skills = Skill::all();
+        return view('admin.Characters.create',compact('races', 'characters', 'skills'));
     }
 
     /**
@@ -45,10 +47,11 @@ class CharacterController extends Controller
     public function store(CharacterRequest $request)
     {
         $form_data = $request->all();
+        $form_data['slug'] = Character::generateSlug($form_data['name']);
         $new_character = new Character();
         $new_character->fill($form_data);
         $new_character->save();
-        return redirect()->route('characters.show', $new_character);
+        return redirect()->route('admin.characters.show', $new_character->id);
     }
 
     /**
@@ -59,7 +62,7 @@ class CharacterController extends Controller
      */
     public function show(Character $character)
     {
-        return view('Characters.show', compact('character'));
+        return view('admin.characters.show', compact('character'));
     }
 
     /**
@@ -71,8 +74,9 @@ class CharacterController extends Controller
     public function edit(Character $character)
     {
         $races = Race::all();
+        $skills = Skill::all();
 
-        return view('Characters.edit', compact('character', 'races'));
+        return view('admin.characters.edit', compact('character', 'races', 'skills'));
     }
 
     /**
@@ -85,10 +89,21 @@ class CharacterController extends Controller
     public function update(CharacterRequest $request, Character $character)
     {
         $form_data = $request->all();
+        if ($character->name === $form_data['name']) {
+            $form_data['slug'] = $character->slug;
+        } else {
+            $form_data['slug'] = Character::generateSlug($form_data['name']);
+        }
         $character->update($form_data);
+        if (array_key_exists('skills', $form_data)) {
+            $character->skills()->sync($form_data['skills']);
+        }
+        else{
+            $project->technologies()->detach();
+        }
         $races = Race::all();
 
-        return redirect()->route('characters.show', compact('character', 'races'));
+        return redirect()->route('admin.characters.show', ['character' => $character->id])->with('updated', "The character $character->name have been updated");
     }
 
     /**
@@ -100,6 +115,6 @@ class CharacterController extends Controller
     public function destroy(Character $character)
     {
         $character->delete();
-        return redirect()->route('characters.index')->with('deleted', "The Character $character->name have been deleted successfully and you have been automaticaly redirected to the general characters list");
+        return redirect()->route('admin.characters.index')->with('deleted', "The Character $character->name have been deleted successfully and you have been automaticaly redirected to the general characters list");
     }
 }

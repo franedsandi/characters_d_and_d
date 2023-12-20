@@ -29,6 +29,19 @@ class Character extends Model
         'int',
         'sag',
         'car',
-        
     ];
+
+    public static function generateSlug($name){
+        $slug = Str::slug($name, "-");
+        $original_slug = $slug;
+        $exists = Character::where("slug", $slug)->first();
+        $c = 1;
+        while($exists){
+            $slug = $original_slug . "-" . $c;
+            $exists = Character::where("slug", $slug)->first();
+
+            $c++;
+        }
+        return $slug;
+    }
 }
