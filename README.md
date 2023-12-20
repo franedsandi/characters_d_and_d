@@ -83,4 +83,4 @@ Front end:
 
 
 ### to fix
-    image size on index characters
+    image size on index characters - FIXED
