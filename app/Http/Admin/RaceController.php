@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
@@ -20,12 +20,12 @@ class RaceController extends Controller
     public function index()
     {
         $races = Race::orderBy('id', 'desc')->paginate(8);
-        return view('races.index', compact('races'));
+        return view('admin.races.index', compact('races'));
     }
 
     public function characterRaces(Race $race) {
         $characters = $race->characters()->orderBy('id', 'desc')->paginate(4);
-        return view('races.character_race', compact('race', 'characters'));
+        return view('admin.races.character_race', compact('race', 'characters'));
     }
     /**
      * Show the form for creating a new resource.
@@ -40,11 +40,16 @@ class RaceController extends Controller
      */
     public function store(RaceRequest $request)
     {
-        $form_data = $request->all();
-        $new_race = new Race($form_data);
-        $new_race->fill($form_data);
-        $new_race->save();
-        return redirect()->route('races.show', $new_race);
+        $exist = Race::where('name', $request->name)->first();
+        if($exist){
+            return redirect()->route('admin.races.index')->with('error', 'This race already exist');
+        }else{
+            $new_race = new Race($form_data);
+            $new_race->slug = Race::generateSlug($request['name']);
+            $new_race->fill($form_data);
+            $new_race->save();
+            return redirect()->route('admin.races.show')->with('success', 'Race created');
+        }
     }
 
     /**
@@ -52,7 +57,7 @@ class RaceController extends Controller
      */
     public function show(Race $race)
     {
-        return view('races.show', compact('race'));
+        return view('admin.races.show', compact('race'));
     }
 
     /**
