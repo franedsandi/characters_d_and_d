@@ -66,7 +66,7 @@ To fix the issue you can:
 
 Back end:
 -una seed per la db con dati reali dei characters, skills, races; (fatto array dei characters, da implementare)
--crud skills e crud races
+-crud skills e crud races. (aggiunto create di races)
 -aggiungere una imagine a ogni raza nel db;
 -La page di tutti i personaggi appartenenti a una stessa razza; (GIA FATTO)
 -modifica del create e update dei personaggi per aggiungere razza (FATTO) e skills (DA FARE);

@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\Race;
 use App\Models\Character;
+use App\Http\Requests\RaceRequest;
 
 
 class RaceController extends Controller
@@ -37,9 +38,13 @@ class RaceController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(RaceRequest $request)
     {
-        //
+        $form_data = $request->all();
+        $new_race = new Race($form_data);
+        $new_race->fill($form_data);
+        $new_race->save();
+        return redirect()->route('races.show', $new_race);
     }
 
     /**
