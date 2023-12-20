@@ -98,7 +98,7 @@ To fix the issue you can:
 
 ### To fix
 
--image size on index characters -------------------------------------------------------------- [FIXED] (by s-p branch)
+-image size on index characters -------------------------------------------------------------- [FIXED] (s-p-branch) (in main)
 
 ### Leyend
 -x   +++++ = [DA-FARE]
