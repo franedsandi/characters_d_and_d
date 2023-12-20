@@ -99,7 +99,7 @@ class CharacterController extends Controller
             $character->skills()->sync($form_data['skills']);
         }
         else{
-            $project->technologies()->detach();
+            $character->skills()->detach();
         }
         $races = Race::all();
 
