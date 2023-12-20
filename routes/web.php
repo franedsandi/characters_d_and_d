@@ -35,7 +35,7 @@ Route::middleware(['auth', 'verified'])
         Route::resource('characters', CharacterController::class);
         /* Route::resource('skills', SkillController::class); */
         Route::resource('races', RaceController::class);
-        Route::get('character-race', [RaceController::class, 'characterRaces'])->name('characterRaces');
+        Route::get('/character-races/{race}', [RaceController::class, 'characterRaces'])->name('character-races');
     });
 
 require __DIR__.'/auth.php';

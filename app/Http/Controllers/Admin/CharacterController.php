@@ -48,10 +48,12 @@ class CharacterController extends Controller
     {
         $form_data = $request->all();
         $form_data['slug'] = Character::generateSlug($form_data['name']);
+        $race = Race::where('name', $form_data['race'])->first();
         $new_character = new Character();
         $new_character->fill($form_data);
+        $new_character->race()->associate($race);
         $new_character->save();
-        return redirect()->route('admin.Characters.show', $new_character->id);
+        return redirect()->route('admin.characters.show', $new_character->id);
     }
 
     /**
