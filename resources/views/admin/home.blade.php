@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('layouts.admin')
 
 @section('content')
     <h1 class="text-white">D&D project</h1>
@@ -6,10 +6,10 @@
     </p>
 
     <button type="button" class="btn btn-warning">
-        <a href="{{Route('characters.index')}}" class="nav-link active" aria-current="page">Character List</a>
+        <a href="{{Route('admin.characters.index')}}" class="nav-link active" aria-current="page">Character List</a>
     </button>
     {{-- make character  --}}
-    @include('partials.create_boton', ['route' => route('characters.create'), 'add' => 'Make your own character'] )
+    @include('admin.partials.create_boton', ['route' => route('admin.characters.create'), 'add' => 'Make your own character'] )
 
 
 

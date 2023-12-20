@@ -10,7 +10,7 @@
 <div class=" d-flex flex-wrap gap-2 my-3 justify-content-center">
 
 @foreach ($characters as $character)
-    <a class="text-decoration-none text-white h-100" href="{{ route('characters.show', $character)}}">
+    <a class="text-decoration-none text-white h-100" href="{{ route('admin.characters.show', $character)}}">
         <div class="card item p-2 text-white my-4" style="width: 17rem;">
             <img src="{{$character->picture}}" class="card-img-top w-100" alt="{{$character->name}}">
             <div class="card-body">
@@ -21,9 +21,9 @@
                 <p class="card-text">STORY: {{$character->background}}</p>
             </div>
             <div class="d-flex gap-2 justify-content-center">
-                @include('partials.show_button', ['route' => route('characters.show', $character)])
-                @include('partials.edit_boton', ['route' => route('characters.edit', $character)])
-                @include('partials.delete_boton', ['route' => route('characters.destroy', $character)])
+                @include('admin.partials.show_button', ['route' => route('admin.characters.show', $character)])
+                @include('admin.partials.edit_boton', ['route' => route('admin.characters.edit', $character)])
+                @include('admin.partials.delete_boton', ['route' => route('admin.characters.destroy', $character)])
             </div>
         </div>
     </a>

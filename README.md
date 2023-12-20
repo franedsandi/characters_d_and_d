@@ -77,9 +77,8 @@ Front end:
 -Pagina dove si vede la lista personaggi;
 -Aggiungere funzione search per trovare i personaggi;
 -Pagina dove si può estrarre un personaggio casuale per giocare cliccando un d20;
--prova
-
--prova2
 
 ### to fix
     image size on index characters - FIXED by s-p branch
+
+

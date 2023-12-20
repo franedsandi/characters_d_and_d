@@ -35,7 +35,7 @@ class CharacterController extends Controller
         $character= new Character();
         $races=Race::all();
         $skills = Skill::all();
-        return view('admin.Characters.create',compact('races', 'characters', 'skills'));
+        return view('admin.Characters.create',compact('races','character', 'skills'));
     }
 
     /**
@@ -51,7 +51,7 @@ class CharacterController extends Controller
         $new_character = new Character();
         $new_character->fill($form_data);
         $new_character->save();
-        return redirect()->route('admin.characters.show', $new_character->id);
+        return redirect()->route('admin.Characters.show', $new_character->id);
     }
 
     /**

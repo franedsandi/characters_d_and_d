@@ -30,8 +30,8 @@
 
     </div>
     <div class="d-flex justify-content-center gap-3">
-        @include('partials.edit_boton', ['route' => route('characters.edit', $character)])
-        @include('partials.delete_boton', ['route' => route('characters.destroy', $character)])
+        @include('admin.partials.edit_boton', ['route' => route('admin.characters.edit', $character)])
+        @include('admin.partials.delete_boton', ['route' => route('admin.characters.destroy', $character)])
     </div>
 </div>
 

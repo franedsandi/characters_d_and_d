@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('characters', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('slug');
             $table->decimal('height',5,2)->unsigned();
             $table->decimal('weight',8,2)->unsigned();
             $table->text('background');

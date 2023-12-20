@@ -15,12 +15,12 @@
     <title>Document</title>
 </head>
 <body>
-    @include('partials.header')
+    @include('admin.partials.header')
 <main>
     <div class="container py-5 px-5">
         @yield('content')
     </div>
 </main>
-    @include('partials.footer')
+    @include('admin.partials.footer')
 </body>
 </html>

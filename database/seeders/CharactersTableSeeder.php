@@ -24,6 +24,7 @@ class CharactersTableSeeder extends Seeder
             foreach ($characters as $characterData) {
                 $character = new Character;
                 $character->name = $characterData['name'];
+                $character->slug = Character::generateSlug($character->name);
                 $character->race_id = $characterData['race_id'];
                 $character->height = $characterData['height'];
                 $character->weight = $characterData['weight'];

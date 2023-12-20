@@ -19,6 +19,7 @@ class SkillsTableSeeder extends Seeder
         foreach ($data as $skill){
             $new_skill= new Skill();
             $new_skill->name= $skill;
+            $new_skill->slug = Skill::generateSlug($new_skill->name);
             $new_skill->description = $faker->text(255);
             $new_skill->particular_buff= $faker->sentence(1);
             $new_skill->save();

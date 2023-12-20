@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
+
 
 class Character extends Model
 {
@@ -17,6 +19,7 @@ class Character extends Model
 
     protected $fillable = [
         'name',
+        'slug',
         'race_id',
         'height',
         'weight',

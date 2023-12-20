@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
+
 
 
 class Race extends Model
@@ -15,6 +17,7 @@ class Race extends Model
 
     protected $fillable = [
         'name',
+        'slug',
         'description',
         'mod_for',
         'mod_des',

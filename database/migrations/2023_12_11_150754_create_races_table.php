@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('races', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('slug');
             $table->text('description');
             $table->tinyInteger('mod_for')->range(-3,3);
             $table->tinyInteger('mod_des')->range(-3,3);
