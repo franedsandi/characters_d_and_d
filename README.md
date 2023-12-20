@@ -81,5 +81,6 @@ Front end:
 -Pagina dove si può estrarre un personaggio casuale per giocare cliccando un d20;
 -prova
 
+
 ### to fix
     image size on index characters

@@ -3,8 +3,7 @@
     .card-img-top {
         border-radius: 10%;
         box-shadow: 0px 0px 30px 10px rgba(87, 65, 6, 0.575);
-        height: 25vw;
-        width:25vw;
+        height: 350px;
         object-fit: cover;
         overflow: hidden;
         &:hover {
@@ -24,3 +23,8 @@
     .character.image img:hover {
         opacity: .9;
     }
+
+.text-muted{
+    color:white !important ;
+    margin-right: 15px;
+}

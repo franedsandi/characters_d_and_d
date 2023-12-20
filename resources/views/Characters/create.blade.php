@@ -14,6 +14,7 @@
         <div class="mb-3">
             <label for="race" class="form-label">Race</label>
             <select class="form-select" id="race" name="race">
+                <option  selected disabled>Select a Race</option>
                 @foreach ($races as $race)
                     <option value="{{ $race['name'] }}" {{ old('race') == $race['name'] ? 'selected' : '' }}>
                         {{ $race['name'] }}
