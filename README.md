@@ -66,9 +66,8 @@ To fix the issue you can:
 
 - Seed for the database with real character data [DONE] (s-p-branch) (in main)
 - Seed for the database with real skills data [TODO]
-- Seed for the database with real races data [TODO]
-- API with Json data [TODO]
-- user styles at login and recupera pasword [TODO]
+- Seed for the database with real races data [DONE] (partially, only 8 races [they are a bunch]) (f-s-branch) (in main)
+- API with Json data [DONE] (e-v-branch) (in main)
   
 ### CRUD Races:
 - Create [DONE] (s-p-branch) (in main)
@@ -90,7 +89,7 @@ To fix the issue you can:
 - Page displaying all characters belonging to a specific race [DONE] (f-s-branch) (in main)
 
 - Modify create and update for characters to include race [DONE] (f-s-branch) (in main)
-- Modify create and update for characters to include skills [f-s-branch]
+- Modify create and update for characters to include skills [TODO]
 
 - Login (users can only see their characters after logging in) [DONE] (f-s-branch) (in main)
 - Login 2.0 (users can see only their characters after logging in) [TODO]
@@ -113,4 +112,4 @@ To fix the issue you can:
 - Image size on the index characters [FIXED] (s-p-branch) (in main)
 
 # Completation percent
-(10/31) -> 30%
+(12/30) -> 40%
