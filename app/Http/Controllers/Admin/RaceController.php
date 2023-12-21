@@ -50,7 +50,7 @@ class RaceController extends Controller
             $new_race->slug = Race::generateSlug($form_data['name']);
             $new_race->fill($form_data);
             $new_race->save();
-            return redirect()->route('admin.races.show', $new_race)->with('success', 'Race created');
+            return redirect()->route('admin.races.show', $new_race)->with('success', 'the race was successfully created');
         }
     }
 
