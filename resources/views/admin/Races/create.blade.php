@@ -4,7 +4,7 @@
 <h2>Create a new race</h2>
 
 <div class="my-3 d-flex justify-content-center ">
-    <form class="text-warning fw-semibold w-50" action="{{route('races.store')}}" method="POST">
+    <form class="text-warning fw-semibold w-50" action="{{route('admin.races.store')}}" method="POST">
     @csrf
         <div class="mb-3">
             <label for="Name" class="form-label">Name</label>
