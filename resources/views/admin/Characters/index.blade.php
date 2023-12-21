@@ -7,7 +7,7 @@
 </div>
 @endif
 
-@include('admin.partials.searchbar')
+@include('admin.partials.searchbar', ['route' => route('admin.characters.index', $characters)])
 
 <div class="characters d-flex flex-wrap gap-2 my-3 justify-content-center">
 
