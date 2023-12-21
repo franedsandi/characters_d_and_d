@@ -32,7 +32,7 @@ class RaceController extends Controller
      */
     public function create()
     {
-        return view('races.create');
+        return view('admin.races.create');
     }
 
     /**
@@ -40,15 +40,17 @@ class RaceController extends Controller
      */
     public function store(RaceRequest $request)
     {
-        $exist = Race::where('name', $request->name)->first();
+        $form_data = $request->all();
+
+        $exist = Race::where('name', $form_data['name'])->first();
         if($exist){
             return redirect()->route('admin.races.index')->with('error', 'This race already exist');
         }else{
-            $new_race = new Race($form_data);
-            $new_race->slug = Race::generateSlug($request['name']);
+            $new_race = new Race();
+            $new_race->slug = Race::generateSlug($form_data['name']);
             $new_race->fill($form_data);
             $new_race->save();
-            return redirect()->route('admin.races.show')->with('success', 'Race created');
+            return redirect()->route('admin.races.show', $new_race)->with('success', 'the race was successfully created');
         }
     }
 
@@ -63,17 +65,26 @@ class RaceController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Race $race)
     {
-        //
+        return view('admin.races.edit', compact('race'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(RaceRequest $request, Race $race)
     {
-        //
+        $form_data = $request->all();
+         //  slug
+        if ($race->name === $form_data['name']) {
+            $form_data['slug'] = $race->slug;
+        } else {
+            $form_data['slug'] = Race::generateSlug($form_data['name']);
+        }
+
+        $race->update($form_data);
+        return redirect()->route('admin.races.show', $race)->with('updated', "The $race->name have been updated");
     }
 
     /**
