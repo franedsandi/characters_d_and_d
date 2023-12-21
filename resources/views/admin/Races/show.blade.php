@@ -54,8 +54,13 @@
 
 {{-- back to races index --}}
 
-<a class="btn btn-warning" href="{{route('admin.races.index')}}">
-    <i class="fa-solid fa-arrow-left fa-beat-fade"></i>
-</a>
+
+<div class="d-flex gap-2 mt-3">
+    <a class="btn btn-warning" href="{{route('admin.races.index')}}">
+        <i class="fa-solid fa-arrow-left fa-beat-fade"></i>
+    </a>
+    @include('admin.partials.characters_race_btn', ['route' => route('admin.character-races', $race)])
+    @include('admin.partials.edit_boton', ['route' => route('admin.races.edit', $race)])
+</div>
 
 @endsection

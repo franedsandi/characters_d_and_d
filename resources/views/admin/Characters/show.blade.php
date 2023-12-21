@@ -2,6 +2,17 @@
 
 @section('content')
 
+@if (session('success'))
+<div class="alert alert-success" role="alert">
+    {{ session('success') }}
+</div>
+@endif
+@if (session('updated'))
+<div class="alert alert-success" role="alert">
+    {{ session('updated') }}
+</div>
+@endif
+
 <div class="characters text-white">
     <div class="character image">
         <img src="{{$character->picture}}" alt="{{$character->name}}" width="400px">

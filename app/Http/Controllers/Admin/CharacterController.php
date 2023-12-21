@@ -5,12 +5,11 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use App\Models\Character;
-use App\Http\Requests\CharacterRequest;
 use Illuminate\Validation\Validator;
 use App\Models\Skill;
 use App\Models\Race;
-
+use App\Models\Character;
+use App\Http\Requests\CharacterRequest;
 
 class CharacterController extends Controller
 {

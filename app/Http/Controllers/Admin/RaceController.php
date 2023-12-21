@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Validator;
 use App\Models\Race;
 use App\Models\Character;
 use App\Http\Requests\RaceRequest;
@@ -17,8 +18,15 @@ class RaceController extends Controller
      */
 
 
-    public function index()
+    public function index(Request $request)
     {
+        $searchTerm = $request->input('search');
+        $races = Race::query();
+
+        if ($searchTerm) {
+            $races = $races->where('name', 'LIKE', "%$searchTerm%");
+        }
+
         $races = Race::orderBy('id', 'desc')->paginate(8);
         return view('admin.races.index', compact('races'));
     }

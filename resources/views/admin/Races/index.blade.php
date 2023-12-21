@@ -1,9 +1,10 @@
 @extends('layout.main')
 
 @section('content')
-
+<div class="characters">
 <div class="d-flex">
     @include('admin.partials.create_boton', ['route' => route('admin.races.create'), 'add' => 'add race'] )
+    @include('admin.partials.searchbar', ['route' => route('admin.races.index', $races), 'name' => 'race'])
 </div>
 
 
@@ -34,5 +35,6 @@
 
 <div class="mt-5 d-flex justify-content-center" style="color: white">
     {{$races->links()}}
+</div>
 </div>
 @endsection
