@@ -27,8 +27,8 @@ class RaceController extends Controller
             $races = $races->where('name', 'LIKE', "%$searchTerm%");
         }
 
-        $races = Race::orderBy('id', 'desc')->paginate(8);
-        return view('admin.races.index', compact('races'));
+        $races = $races->orderBy('id', 'desc')->paginate(8);
+        return view('admin.Races.index', compact('races'));
     }
 
     public function characterRaces(Race $race) {

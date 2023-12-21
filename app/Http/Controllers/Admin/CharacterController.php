@@ -20,8 +20,6 @@ class CharacterController extends Controller
      */
     public function index(Request $request)
     {
-        // $characters = Character::orderBy('id', 'desc')->paginate(4);
-        // return view('admin.Characters.index', compact('characters'));
 
         $searchTerm = $request->input('search');
         $characters = Character::query();

@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('content')
-<div class="races"></div>
+<div class="races">
 
     @if (session('success'))
     <div class="alert alert-success" role="alert">
