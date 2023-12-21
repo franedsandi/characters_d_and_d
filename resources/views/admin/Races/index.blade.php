@@ -6,6 +6,14 @@
     @include('admin.partials.create_boton', ['route' => route('admin.races.create'), 'add' => 'add race'] )
 </div>
 
+
+@if (session('error'))
+<div class="alert alert-danger" role="alert">
+    {{ session('error') }}
+</div>
+@endif
+
+
 <div class="d-flex flex-wrap gap-2 my-3 justify-content-center">
 @foreach ($races as $race )
     <a class="text-decoration-none text-white h-100" href="{{ route('admin.races.show', $race)}}">

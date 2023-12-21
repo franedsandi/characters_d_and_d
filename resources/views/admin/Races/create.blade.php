@@ -6,6 +6,17 @@
 <div class="my-3 d-flex justify-content-center ">
     <form class="text-warning fw-semibold w-50" action="{{route('admin.races.store')}}" method="POST">
     @csrf
+    @method('POST')
+    {{-- Stampa tutti gli errori --}}
+    @if($errors->any())
+    <div class="alert alert-danger" role="alert">
+        <ul>
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
         <div class="mb-3">
             <label for="Name" class="form-label">Name</label>
             <input type="text" class="form-control" id="name" name="name" style="width: 100%" value="{{old('name')}}">
