@@ -7,6 +7,8 @@
 </div>
 @endif
 
+@include('admin.partials.searchbar')
+
 <div class="characters d-flex flex-wrap gap-2 my-3 justify-content-center">
 
 @foreach ($characters as $character)
