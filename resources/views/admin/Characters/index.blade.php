@@ -7,7 +7,9 @@
 </div>
 @endif
 
-<div class=" d-flex flex-wrap gap-2 my-3 justify-content-center">
+@include('admin.partials.searchbar', ['route' => route('admin.characters.index', $characters), 'name' => 'characters'])
+
+<div class="characters d-flex flex-wrap gap-2 my-3 justify-content-center">
 
 @foreach ($characters as $character)
     <a class="text-decoration-none text-white h-100" href="{{ route('admin.characters.show', $character)}}">

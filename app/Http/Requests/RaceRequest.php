@@ -24,7 +24,7 @@ class RaceRequest extends FormRequest
      {
          return [
              "name" => "required|min:1|max:50",
-             "description" => "required|min:1|max:65.000",
+             "description" => "required|min:1|max:65000",
              "mod_for" => "required|numeric|min:-3|max:3",
              "mod_des" => "required|numeric|min:-3|max:3",
              "mod_cos" => "required|numeric|min:-3|max:3",

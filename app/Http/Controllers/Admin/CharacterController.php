@@ -5,12 +5,11 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use App\Models\Character;
-use App\Http\Requests\CharacterRequest;
 use Illuminate\Validation\Validator;
 use App\Models\Skill;
 use App\Models\Race;
-
+use App\Models\Character;
+use App\Http\Requests\CharacterRequest;
 
 class CharacterController extends Controller
 {
@@ -19,9 +18,18 @@ class CharacterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $characters = Character::orderBy('id', 'desc')->paginate(4);
+
+        $searchTerm = $request->input('search');
+        $characters = Character::query();
+
+        if ($searchTerm) {
+            $characters = $characters->where('name', 'LIKE', "%$searchTerm%");
+        }
+
+        $characters = $characters->orderBy('id', 'desc')->paginate(4);
+
         return view('admin.Characters.index', compact('characters'));
     }
 
