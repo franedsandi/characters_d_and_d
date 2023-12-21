@@ -84,7 +84,7 @@ class RaceController extends Controller
         }
 
         $race->update($form_data);
-        return redirect()->route('admin.races.show', $race)->with('updated', "The $race have been updated");
+        return redirect()->route('admin.races.show', $race)->with('updated', "The $race->name have been updated");
     }
 
     /**

@@ -7,6 +7,11 @@
     {{ session('success') }}
 </div>
 @endif
+@if (session('updated'))
+<div class="alert alert-success" role="alert">
+    {{ session('updated') }}
+</div>
+@endif
 
 <h1> {{$race->name}}</h1>
 
