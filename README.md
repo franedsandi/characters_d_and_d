@@ -68,6 +68,7 @@ To fix the issue you can:
 - Seed for the database with real skills data [TODO]
 - Seed for the database with real races data [TODO]
 - API with Json data [TODO]
+- user styles at login and recupera pasword [TODO]
   
 ### CRUD Races:
 - Create [DONE] (s-p-branch) (in main)
@@ -95,7 +96,9 @@ To fix the issue you can:
 - Login 2.0 (users can see only their characters after logging in) [TODO]
 - Style modification for login (view.auth) [TODO]
 
-- Search bar to find user characters [TODO]
+- Search bar to find user {{generic route}}[PART/DONE] (g-g) (in main)
+    -searchbar generic mode [TODO]
+    -search bar interaction with paginator  [TODO]
 - Contact Us form [TODO]
 
 ## Front End:
