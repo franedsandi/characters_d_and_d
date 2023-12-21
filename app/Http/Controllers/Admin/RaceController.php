@@ -65,17 +65,26 @@ class RaceController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Race $race)
     {
-        //
+        return view('admin.races.edit', compact('race'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(RaceRequest $request, Race $race)
     {
-        //
+        $form_data = $request->all();
+         //  slug
+        if ($race->name === $form_data['name']) {
+            $form_data['slug'] = $race->slug;
+        } else {
+            $form_data['slug'] = Race::generateSlug($form_data['name']);
+        }
+
+        $race->update($form_data);
+        return redirect()->route('admin.races.show', $race)->with('updated', "The $race have been updated");
     }
 
     /**

@@ -70,8 +70,8 @@ To fix the issue you can:
   
 ### CRUD Races:
 - Create [DONE] (s-p-branch) (in main)
-- Read [TODO]
-- Update [TODO]
+- Read [TODO] (s-p-branch) (in main)
+- Update [TODO] (s-p-branch) (in main)
 - Delete [TODO]
 
 ### CRUD Skills:
