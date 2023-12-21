@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="text-white">
+<div class="characters text-white">
     <div class="character image">
         <img src="{{$character->picture}}" alt="{{$character->name}}" width="400px">
     </div>

@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('content')
-<div class="my-3 d-flex justify-content-center ">
+<div class="characters my-3 d-flex justify-content-center ">
     <form class="text-warning fw-semibold w-50" action="{{route('admin.characters.store')}}" method="POST">
     @csrf
         <div class="mb-3">

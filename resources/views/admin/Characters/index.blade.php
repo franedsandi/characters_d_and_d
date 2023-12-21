@@ -7,7 +7,7 @@
 </div>
 @endif
 
-<div class=" d-flex flex-wrap gap-2 my-3 justify-content-center">
+<div class="characters d-flex flex-wrap gap-2 my-3 justify-content-center">
 
 @foreach ($characters as $character)
     <a class="text-decoration-none text-white h-100" href="{{ route('admin.characters.show', $character)}}">

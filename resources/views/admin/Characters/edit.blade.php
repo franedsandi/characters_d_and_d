@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('content')
-<div class="my-3 text-warning">
+<div class="characters my-3 text-warning">
     <form action="{{route('admin.characters.update', $character)}}" method="POST">
     @csrf
     @method('PUT')
