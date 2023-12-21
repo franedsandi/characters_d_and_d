@@ -67,6 +67,7 @@ To fix the issue you can:
 - Seed for the database with real character data [DONE] (s-p-branch) (in main)
 - Seed for the database with real skills data [TODO]
 - Seed for the database with real races data [TODO]
+- API with Json data [TODO]
   
 ### CRUD Races:
 - Create [DONE] (s-p-branch) (in main)
@@ -107,3 +108,4 @@ To fix the issue you can:
 ## To Fix:
 
 - Image size on the index characters [FIXED] (s-p-branch) (in main)
+
