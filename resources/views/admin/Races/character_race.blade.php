@@ -17,7 +17,7 @@
                     <div class="d-flex gap-2 justify-content-center">
                         @include('admin.partials.show_button', ['route' => route('admin.characters.show', $character)])
                         @include('admin.partials.edit_boton', ['route' => route('admin.characters.edit', $character)])
-                        @include('admin.partials.delete_boton', ['route' => route('admin.characters.destroy', $character)])
+                        @include('admin.partials.delete_boton', ['route' => route('admin.characters.destroy', $character), 'type' => 'character', 'name' => $character->name])
                     </div>
                 </div>
             </a>
