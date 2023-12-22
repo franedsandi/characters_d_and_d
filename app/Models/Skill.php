@@ -13,6 +13,13 @@ class Skill extends Model
     public function character(){
         return $this->belongsToMany(Character::class);
     }
+
+    protected $fillable = [
+        'name',
+        'slug',
+        'description',
+        'particular_buff',
+    ];
     public static function generateSlug($name){
         $slug = Str::slug($name, "-");
         $original_slug = $slug;

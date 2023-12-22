@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 use App\Models\Skill;
 use Faker\Generator as Faker;
 
+
 class SkillsTableSeeder extends Seeder
 {
     /**

@@ -4,6 +4,7 @@
         <li class="nav-item"><a href="{{Route('admin.characters.index')}}" class="nav-link active" aria-current="page">Character List</a></li>
         <li class="nav-item">@include('admin.partials.create_boton', ['route' => route('admin.characters.create'), 'add' => 'Make your own character'] )</li>
         <li class="nav-item"><a href="{{Route('admin.races.index')}}" class="nav-link active" aria-current="page">Races list</a></li>
+        <li class="nav-item"><a href="{{Route('admin.skills.index')}}" class="nav-link active" aria-current="page">Skills list</a></li>
     </ul>
     <ul class="navbar-nav ml-auto ">
         <div class="d-flex gap-3">

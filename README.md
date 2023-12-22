@@ -73,13 +73,13 @@ To fix the issue you can:
 - Create [DONE] (s-p-branch) (in main)
 - Read [DONE] (s-p-branch) (in main)
 - Update [DONE] (s-p-branch) (in main)
-- Delete [DONE] (f-s-branch) (in main) [TOFIX!!!]
+- Delete [DONE] (f-s-branch) (in main)
 
 ### CRUD Skills:
-- Create [TODO]
-- Read [TODO]
-- Update [TODO]
-- Delete [TODO]
+- Create [DONE] (p-l-branch) 
+- Read   [DONE] (p-l-branch)
+- Update [DONE] (p-l-branch)
+- Delete [DONE] (p-l-branch)
 
 - Add an image for each race in the database:
   - Table update for image link loading [DONE] (s-p-branch)

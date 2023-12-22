@@ -6,6 +6,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CharacterController;
 use App\Http\Controllers\Admin\RaceController;
+use App\Http\Controllers\Admin\SkillController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,7 @@ Route::middleware(['auth', 'verified'])
         Route::resource('characters', CharacterController::class);
         /* Route::resource('skills', SkillController::class); */
         Route::resource('races', RaceController::class);
+        Route::resource('skills', SkillController::class);
         Route::get('/character-races/{race}', [RaceController::class, 'characterRaces'])->name('character-races');
     });
 
