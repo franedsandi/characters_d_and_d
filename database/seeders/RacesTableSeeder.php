@@ -17,6 +17,7 @@ class RacesTableSeeder extends Seeder
         foreach ($races as $raceData) {
             $race = new Race();
             $race->name = $raceData['name'];
+            $race->picture_link = $raceData['picture_link'];
             $race->description = $raceData['description'];
             $race->slug = Race::generateSlug($race->name);
             $race->mod_for = $raceData['mod_for'];
