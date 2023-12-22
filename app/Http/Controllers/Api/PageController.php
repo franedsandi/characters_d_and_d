@@ -10,7 +10,16 @@ use App\Models\Character;
 class PageController extends Controller
 {
     public function index(){
-        $characters = Character::with('race')->paginate(5);
+        $characters = Character::with('race', 'skills')->paginate(5);
         return response()->json($characters);
+    }
+    public function getProjectBySlug($slug){
+        $character = Character::where('slug', $slug)->with('race', 'skills')->first();
+        $success = $character ? true : false;
+
+        return response()->json([
+            'success' => $success,
+            'character' => $character,
+        ]);
     }
 }

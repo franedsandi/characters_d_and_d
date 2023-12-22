@@ -101,6 +101,29 @@
             <p class="text-danger fw-bold">{{ $message }}</p>
             @enderror
         </div>
+        <div class="mb-3">
+            <div class="btn-group d-flex flex-wrap gap-2" role="group" aria-label="Basic checkbox toggle button group">
+                @foreach ($skills as $skill )
+                    <input
+                    id="skill_{{$skill->id}}"
+                    class="btn-check"
+                    autocomplete="off"
+                    type="checkbox"
+                    name="skills[]"
+                    value="{{$skill->id}}"
+                    @if ($errors->any() && in_array($skill->id,old('skills',[])))
+                        checked
+                    @elseif (!$errors->any() && $character->skills->contains($skill))
+                        checked
+                    @endif
+                    >
+
+                    <label
+                    class="btn btn-outline-warning"
+                    for="skill_{{$skill->id}}">{{$skill->name}}</label>
+                @endforeach
+            </div>
+        </div>
         <div class="d-flex gap-2">
             <button type="submit" class="btn btn-warning"> Submit</button>
             <button type="reset" class="btn btn-danger"> Reset</button>
