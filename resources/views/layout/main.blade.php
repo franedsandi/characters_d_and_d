@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <!-- Styles -->
         @vite('resources/js/app.js')
-    <title>Document</title>
+    <title>D&D Project</title>
 </head>
 <body>
     @include('admin.partials.header')
