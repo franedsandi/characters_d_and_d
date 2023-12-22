@@ -81,17 +81,6 @@ To fix the issue you can:
 - Update [DONE] (p-l-branch)
 - Delete [DONE] (p-l-branch)
 
--   Create [TODO]
--   Read [TODO]
--   Update [TODO]
--   Delete [TODO]
-
--   Add an image for each race in the database:
-
-    -   Table update for image link loading [TODO]
-    -   Modify the race model to allow image loading [TODO]
-    -   Modify CRUD for images [TODO]
-
 -   Add an image for each race in the database:
 
     -   Table update for image link loading [DONE] (s-p-branch)
@@ -99,9 +88,6 @@ To fix the issue you can:
     -   Modify CRUD for images [DONE] (s-p-branch)
 
 -   Page displaying all characters belonging to a specific race [DONE] (f-s-branch) (in main)
-
--   Modify create and update for characters to include race [DONE] (f-s-branch) (in main)
--   Modify create and update for characters to include skills [f-s-branch]
 -   Modify create and update for characters to include race [DONE] (f-s-branch) (in main)
 -   Modify create and update for characters to include skills [TODO] (info needed)
 
@@ -128,4 +114,4 @@ To fix the issue you can:
 
 # Completation percent
 
-(14/31) -> 45.16%
+(21/31) -> 67.74%
