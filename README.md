@@ -73,7 +73,7 @@ To fix the issue you can:
 - Create [DONE] (s-p-branch) (in main)
 - Read [DONE] (s-p-branch) (in main)
 - Update [DONE] (s-p-branch) (in main)
-- Delete [DONE] (f-s-branch) (in main)
+- Delete [DONE] (f-s-branch) (in main) [TOFIX!!!]
 
 ### CRUD Skills:
 - Create [TODO]
@@ -82,9 +82,9 @@ To fix the issue you can:
 - Delete [TODO]
 
 - Add an image for each race in the database:
-  - Table update for image link loading [TODO]
-  - Modify the race model to allow image loading [TODO]
-  - Modify CRUD for images [TODO]
+  - Table update for image link loading [DONE] (s-p-branch)
+  - Modify the race model to allow image loading [DONE] (s-p-branch)
+  - Modify CRUD for images [DONE] (s-p-branch)
 
 - Page displaying all characters belonging to a specific race [DONE] (f-s-branch) (in main)
 
