@@ -18,40 +18,48 @@
 
     <p> {{$race->description}}</p>
 
-    <table class="table table-dark table-striped w-25">
-            <thead>
-        <tr>
-            <th scope="col">Value</th>
-            <th scope="col">#</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th scope="row">For</th>
-            <td>{{$race->mod_for}}</td>
-        </tr>
-        <tr>
-            <th scope="row">Des</th>
-            <td>{{$race->mod_des}}</td>
-        </tr>
-        <tr>
-            <th scope="row">Cos</th>
-            <td>{{$race->mod_cos}}</td>
-        </tr>
-        <tr>
-            <th scope="row">Int</th>
-            <td>{{$race->mod_int}}</td>
-        </tr>
-        <tr>
-            <th scope="row">Sag</th>
-            <td>{{$race->mod_sag}}</td>
-        </tr>
-        <tr>
-            <th scope="row">Car</th>
-            <td>{{$race->mod_car}}</td>
-        </tr>
-        </tbody>
-    </table>
+    <div class="races d-flex gap-5">
+            <table class="table table-dark table-striped table-hover w-25">
+                <thead>
+            <tr>
+                <th scope="col">Value</th>
+                <th scope="col">#</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">For</th>
+                <td>{{$race->mod_for}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Des</th>
+                <td>{{$race->mod_des}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Cos</th>
+                <td>{{$race->mod_cos}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Int</th>
+                <td>{{$race->mod_int}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Sag</th>
+                <td>{{$race->mod_sag}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Car</th>
+                <td>{{$race->mod_car}}</td>
+            </tr>
+            </tbody>
+        </table>
+
+        {{-- image  --}}
+        <div id="race-img" class="races image py-2">
+            <img class="w-25 rounded" src="{{$race->picture_link}}" alt="{{$race->name}}">
+        </div>
+    </div>
+
 
     {{-- back to races index --}}
 
@@ -66,3 +74,4 @@
     </div>
 </div>
 @endsection
+

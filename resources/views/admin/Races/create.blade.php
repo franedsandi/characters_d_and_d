@@ -25,6 +25,13 @@
                 <p class="text-danger fw-bold">{{ $message }}</p>
                 @enderror
             </div>
+            <div class="mb-3">
+                <label for="picture_link" class="form-label">link image</label>
+                <input type="text" class="form-control" id="picture_link" name="picture_link" style="width: 100%" value="{{old('picture_link')}}">
+                @error('picture_link')
+                <p class="text-danger fw-bold">{{ $message }}</p>
+                @enderror
+            </div>
             <div class="mb-3 d-flex flex-column">
                 <label for="race" class="form-label">Description</label>
                 <textarea type="text" id="description" name="description" value="{{old('description')}}">
