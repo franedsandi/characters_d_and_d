@@ -110,7 +110,7 @@ To fix the issue you can:
 # To Fix:
 
 - Image size on the index characters [FIXED] (s-p-branch) (in main)
-- Race cascade delete behavior [TOFIX]
+- Race cascade delete behavior [FIXED]
 
 # Completation percent
 (12/30) -> 40%
