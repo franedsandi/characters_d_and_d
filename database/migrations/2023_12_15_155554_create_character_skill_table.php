@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreign('character_id')->references('id')->on('characters')->cascadeOnDelete();
             $table->unsignedBigInteger('skill_id');
             $table->foreign('skill_id')->references('id')->on('skills')->cascadeOnDelete();
+            $table->tinyInteger('skill_value')->unsigned()->default(0);
         });
     }
 

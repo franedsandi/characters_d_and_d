@@ -14,16 +14,16 @@ class SkillsTableSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(Faker $faker): void
+    public function run(): void
     {
-        $data = ['Acrobatics', 'Animal Handling', 'Arcana', 'Athletics', 'Deception', 'History', 'Insight', 'Intimidation', 'Investigation', 'Medicine', 'Nature', 'Perception', 'Performance', 'Persuasion', 'Religion', 'Sleight of Hand', 'Stealth', 'Survival'];
-        foreach ($data as $skill){
-            $new_skill= new Skill();
-            $new_skill->name= $skill;
-            $new_skill->slug = Skill::generateSlug($new_skill->name);
-            $new_skill->description = $faker->text(255);
-            $new_skill->particular_buff= $faker->sentence(1);
-            $new_skill->save();
+        $skillsData = include(base_path('database/seeders/skills_data.php'));
+        foreach ($skills as $skillData){
+            $skill= new Skill();
+            $skill->name = $skillData['name'];
+            $skill->slug = Skill::generateSlug($skill->name);
+            $skill->description = $skillData['description'];
+            $skill->particular_buff= $skillData['particular_buff'];
+            $skill->save();
         }
     }
 }
