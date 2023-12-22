@@ -1,7 +1,7 @@
 <form
 action="{{$route}}"
 method="Post"
-onsubmit="return confirm('Are you sure you want to DELETE the character: {{$character->name}}')">
+onsubmit="return confirm('Are you sure you want to DELETE the {{$type}}: {{$name}}')">
 
     @csrf
     @method('DELETE')

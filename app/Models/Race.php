@@ -18,6 +18,7 @@ class Race extends Model
     protected $fillable = [
         'name',
         'slug',
+        'picture_link',
         'description',
         'mod_for',
         'mod_des',

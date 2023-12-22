@@ -11,9 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('characters', function (Blueprint $table) {
-            $table->unsignedBigInteger('race_id')->nullable();
-            $table->foreign('race_id')->references('id')->on('races')->onDelete('cascade');
+        Schema::table('races', function (Blueprint $table) {
+            $table->string('picture_link')->after('slug')->nullable();
         });
     }
 
@@ -22,9 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('characters', function (Blueprint $table) {
-            $table->dropForeign((['race_id']));
-            $table->dropColumn('race_id');
+        Schema::table('races', function (Blueprint $table) {
+            $table->dropColumn('picture_link');
         });
     }
 };
