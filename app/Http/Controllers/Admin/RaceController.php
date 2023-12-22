@@ -98,8 +98,9 @@ class RaceController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Race $race)
     {
-        //
+        $race->delete();
+        return redirect()->route('admin.races.index')->with('deleted', "The race $race->name have been deleted (race extintion) successfully and you have been automaticaly redirected to the general characters list");
     }
 }

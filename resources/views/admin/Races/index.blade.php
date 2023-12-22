@@ -26,6 +26,7 @@
                         @include('admin.partials.show_button', ['route' => route('admin.races.show', $race)])
                         @include('admin.partials.characters_race_btn', ['route' => route('admin.character-races', $race)])
                         @include('admin.partials.edit_boton', ['route' => route('admin.races.edit', $race)])
+                        @include('admin.partials.delete_boton', ['route' => route('admin.races.destroy', $race), 'type' => 'race' , 'name' => $race->name ])
                     </div>
                 </div>
             </div>
