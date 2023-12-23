@@ -68,7 +68,7 @@ To fix the issue you can:
 - Seed for the database with real skills data [DONE] (f-s-branch) (in main)
 - Seed for the database with real races data [DONE] (partially, only 8 races [they are a bunch]) (f-s-branch) (in main)
 - API with Json data [DONE] (e-v-branch) (in main)
-- add logo and link to public site [DONE] (s-p-branch)
+- add logo and link to public site [DONE] (s-p-branch) (in main)
 
 ### CRUD Races:
 - Create [DONE] (s-p-branch) (in main)
@@ -112,8 +112,8 @@ To fix the issue you can:
 
 -   Image size on the index characters [FIXED] (s-p-branch) (in main)
 -   Race cascade delete behavior [FIXED] (f-s-branch) (in main)
--   style of create and edit form characters/form race [FIXED] (s-p-branch) 
+-   style of create and edit form characters/form race [FIXED] (s-p-branch)  (in main)
 
 # Completation percent
 
-(25/31) -> 80.64%
+(28/33) -> 84.84%
