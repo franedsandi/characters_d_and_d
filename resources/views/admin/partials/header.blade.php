@@ -1,4 +1,15 @@
-<header class="d-flex justify-content-around py-3">
+<header class="d-flex py-4 justify-content-between align-items-center">
+    <div class=" px-1 d-flex align-items-center">
+        <div class="logo p-1 " style="width: 80px">
+            <img class="d-inline-block img-fluid w-100 h-100" src="/logoDandD.png" alt="logoDeD">
+        </div>
+        <a href="{{ route('home')}}" class="btn btn-outline-secondary text-white text-decoration-none">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>public site</span>
+        </a>
+    </div>
+
+
     <ul class="nav nav-pills gap-3">
         <li class="nav-item"><a href="{{Route('admin.home')}}" class="nav-link active" aria-current="page">Home</a></li>
         <li class="nav-item"><a href="{{Route('admin.characters.index')}}" class="nav-link active" aria-current="page">Character List</a></li>
