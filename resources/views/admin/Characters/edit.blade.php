@@ -13,9 +13,9 @@
             @enderror
         </div>
         <div class="mb-3">
-            <label for="race_id" class="form-label">Project Type</label>
+            <label for="race_id" class="form-label">Character Race</label>
             <select class="form-control" id="race_id" name="race_id">
-                <option value="">Select Type</option>
+                <option value="">Select Race</option>
                 @foreach ($races as $race)
                     <option value="{{ $race->id }}" {{ $character->race_id == $race->id ? 'selected' : '' }}>
                         {{ $race->name }}
