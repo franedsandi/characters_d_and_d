@@ -32,7 +32,6 @@ class CharacterController extends Controller
 
         return view('admin.Characters.index', compact('characters'));
     }
-
     /**
      * Show the form for creating a new resource.
      *

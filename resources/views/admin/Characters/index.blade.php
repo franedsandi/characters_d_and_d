@@ -34,7 +34,7 @@
 </div>
 
 <div class="mt-5 d-flex justify-content-center" style="color: white">
-    {{$characters->links()}}
+    {{ $characters->appends(request()->query())->links() }}
 </div>
 
 

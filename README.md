@@ -97,7 +97,7 @@ To fix the issue you can:
 
 -   Search bar to find user {{generic route}}[PART/DONE] (g-g) (in main)
     -    Searchbar generic mode [DONE] (f-s-branch) (in main)
-    -    Search bar interaction with paginator [TODO]
+    -    Search bar interaction with paginator [DONE] (f-s-branch) (in main)
 -   Contact Us form [TODO]
 
 ## Front End:
