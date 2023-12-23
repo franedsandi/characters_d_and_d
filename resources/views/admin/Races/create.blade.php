@@ -40,47 +40,50 @@
                     <p class="text-danger fw-bold">{{ $message }}</p>
                 @enderror
             </div>
-            <div class="mb-3">
-                <label for="mod_for" class="form-label">mod_for</label>
-                <input type="number" class="form-control" id="mod_for" name="mod_for" value="{{old('mod_for')}}">
-                @error('mod_for')
-                <p class="text-danger fw-bold">{{ $message }}</p>
-                @enderror
-            </div>
-            <div class="mb-3">
-                <label for="mod_des" class="form-label">mod_des</label>
-                <input type="number" class="form-control" id="mod_des" name="mod_des" value="{{old('mod_des')}}">
-                @error('mod_des')
-                <p class="text-danger fw-bold">{{ $message }}</p>
-                @enderror
-            </div>
-            <div class="mb-3">
-                <label for="mod_cos" class="form-label">mod_cos</label>
-                <input type="number" class="form-control" id="mod_cos" name="mod_cos" value="{{old('mod_cos')}}">
-                @error('mod_cos')
-                <p class="text-danger fw-bold">{{ $message }}</p>
-                @enderror
-            </div>
-            <div class="mb-3">
-                <label for="mod_int" class="form-label">mod_int</label>
-                <input type="number" class="form-control" id="mod_int" name="mod_int" value="{{old('mod_int')}}">
-                @error('mod_int')
-                <p class="text-danger fw-bold">{{ $message }}</p>
-                @enderror
-            </div>
-            <div class="mb-3">
-                <label for="mod_sag" class="form-label">mod_sag</label>
-                <input type="number" class="form-control" id="mod_sag" name="mod_sag" value="{{old('mod_sag')}}">
-                @error('mod_sag')
-                <p class="text-danger fw-bold">{{ $message }}</p>
-                @enderror
-            </div>
-            <div class="mb-3">
-                <label for="mod_car" class="form-label">mod_car</label>
-                <input type="number" class="form-control" id="mod_car" name="mod_car" value="{{old('mod_car')}}">
-                @error('mod_car')
-                <p class="text-danger fw-bold">{{ $message }}</p>
-                @enderror
+            <div class="d-flex flex-wrap gap-2">
+                <div class="mb-3 w-25">
+                    <label for="mod_for" class="form-label">mod_for</label>
+                    <input type="number" class="form-control" id="mod_for" name="mod_for" value="{{old('mod_for')}}">
+                    @error('mod_for')
+                    <p class="text-danger fw-bold">{{ $message }}</p>
+                    @enderror
+                </div>
+                <div class="mb-3 w-25">
+                    <label for="mod_des" class="form-label">mod_des</label>
+                    <input type="number" class="form-control" id="mod_des" name="mod_des" value="{{old('mod_des')}}">
+                    @error('mod_des')
+                    <p class="text-danger fw-bold">{{ $message }}</p>
+                    @enderror
+                </div>
+                <div class="mb-3 w-25">
+                    <label for="mod_cos" class="form-label">mod_cos</label>
+                    <input type="number" class="form-control" id="mod_cos" name="mod_cos" value="{{old('mod_cos')}}">
+                    @error('mod_cos')
+                    <p class="text-danger fw-bold">{{ $message }}</p>
+                    @enderror
+                </div>
+                <div class="mb-3 w-25">
+                    <label for="mod_int" class="form-label">mod_int</label>
+                    <input type="number" class="form-control" id="mod_int" name="mod_int" value="{{old('mod_int')}}">
+                    @error('mod_int')
+                    <p class="text-danger fw-bold">{{ $message }}</p>
+                    @enderror
+                </div>
+                <div class="mb-3 w-25">
+                    <label for="mod_sag" class="form-label">mod_sag</label>
+                    <input type="number" class="form-control" id="mod_sag" name="mod_sag" value="{{old('mod_sag')}}">
+                    @error('mod_sag')
+                    <p class="text-danger fw-bold">{{ $message }}</p>
+                    @enderror
+                </div>
+                <div class="mb-3 w-25">
+                    <label for="mod_car" class="form-label">mod_car</label>
+                    <input type="number" class="form-control" id="mod_car" name="mod_car" value="{{old('mod_car')}}">
+                    @error('mod_car')
+                    <p class="text-danger fw-bold">{{ $message }}</p>
+                    @enderror
+                </div>
+
             </div>
 
 
