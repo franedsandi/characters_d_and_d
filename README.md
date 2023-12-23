@@ -111,7 +111,7 @@ To fix the issue you can:
 
 -   Image size on the index characters [FIXED] (s-p-branch) (in main)
 -   Race cascade delete behavior [FIXED] (f-s-branch) (in main)
--   style of create and edit form characters [FIXED] (s-p-branch) 
+-   style of create and edit form characters/form race [FIXED] (s-p-branch) 
 
 # Completation percent
 
