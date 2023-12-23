@@ -68,6 +68,7 @@ To fix the issue you can:
 - Seed for the database with real skills data [DONE] (f-s-branch) (in main)
 - Seed for the database with real races data [DONE] (partially, only 8 races [they are a bunch]) (f-s-branch) (in main)
 - API with Json data [DONE] (e-v-branch) (in main)
+- add logo and link to public site [DONE] (s-p-branch)
 
 ### CRUD Races:
 - Create [DONE] (s-p-branch) (in main)
