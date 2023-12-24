@@ -38,7 +38,8 @@
     </div>
 
     <div class="mt-5 d-flex justify-content-center" style="color: white">
-        {{$races->links()}}
+        {{ $races->appends(request()->query())->links() }}
+
     </div>
 </div>
 @endsection
