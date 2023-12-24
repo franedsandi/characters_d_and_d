@@ -1,6 +1,6 @@
 <header class="d-flex py-4 justify-content-between align-items-center">
     <div class=" px-1 d-flex align-items-center">
-        <div class="logo p-1 " style="width: 80px">
+        <div class="logo p-1" style="width: 80px">
             <img class="d-inline-block img-fluid w-100 h-100" src="/logoDandD.png" alt="logoDeD">
         </div>
         <a href="{{ route('home')}}" class="btn btn-outline-secondary text-white text-decoration-none">
