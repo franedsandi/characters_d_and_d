@@ -94,7 +94,7 @@ To fix the issue you can:
 
 -   Login (users can only see their characters after logging in) [DONE] (f-s-branch) (in main)
 -   Login 2.0 (users can see only their characters after logging in) [TODO]
--   Style modification for login (view.auth) [TODO]
+-   Style modification for login and register with header (view.auth) [DONE] (s-p-branch)
 
 -   Search bar to find user {{generic route}}[PART/DONE] (g-g) (in main)
     -    Searchbar generic mode [DONE] (f-s-branch) (in main)

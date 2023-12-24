@@ -10,7 +10,7 @@
 
         @include('admin.partials.counter_card', ['route' => route('admin.races.index'), 'title' => 'races', 'number' => $races ])
 
-        {{-- @include('admin.partials.counter_card', ['route' => route('admin.skills.index'), 'title' => 'skills', 'number' => $skills ]) --}}
+        @include('admin.partials.counter_card', ['route' => route('admin.skills.index'), 'title' => 'skills', 'number' => $skills ])
     </div>
 
 
