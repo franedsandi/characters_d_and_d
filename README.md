@@ -94,7 +94,7 @@ To fix the issue you can:
 
 -   Login (users can only see their characters after logging in) [DONE] (f-s-branch) (in main)
 -   Login 2.0 (users can see only their characters after logging in) [TODO]
--   Style modification for login and register with header (view.auth) [DONE] (s-p-branch)
+-   Style modification for login and register with header (view.auth) [DONE] (s-p-branch) (in main)
 
 -   Search bar to find user {{generic route}}[PART/DONE] (g-g) (in main)
     -    Searchbar generic mode [DONE] (f-s-branch) (in main)
@@ -116,4 +116,4 @@ To fix the issue you can:
 
 # Completation percent
 
-(28/33) -> 84.84%
+(29/33) -> 87.87%
