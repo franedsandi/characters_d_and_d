@@ -13,7 +13,7 @@ class PageController extends Controller
         $characters = Character::with('race', 'skills')->paginate(5);
         return response()->json($characters);
     }
-    public function getProjectBySlug($slug){
+    public function getCharacterBySlug($slug){
         $character = Character::where('slug', $slug)->with('race', 'skills')->first();
         $success = $character ? true : false;
 
