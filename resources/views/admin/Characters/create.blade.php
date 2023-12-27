@@ -61,21 +61,24 @@
         <div class="d-flex flex-wrap gap-2">
             <div class="mb-3 w-25">
                 <label for="armor_class" class="form-label">Armor Class</label>
-                <input type="number" class="form-control" id="armor_class" name="armor_class" value="{{old('armor_class')}}">
+                <input type="number" class="form-control" id="armor_class" name="armor_class" value="{{ old('armor_class') }}">
+                <button type="button" class="btn btn-primary mt-2" onclick="generateRandomValue('armor_class', 10, 20)">Random ?</button>
                 @error('armor_class')
-                <p class="text-danger fw-bold">{{ $message }}</p>
+                    <p class="text-danger fw-bold">{{ $message }}</p>
                 @enderror
             </div>
             <div class="mb-3 w-25">
                 <label for="for" class="form-label">Strength</label>
-                <input type="number" class="form-control" id="for" name="for" value="{{old('for')}}">
+                <input type="number" class="form-control" id="for" name="for" value="{{ old('for') }}">
+                <button type="button" class="btn btn-primary mt-2" onclick="generateRandomValue('for', 3, 18)">Random ?</button>
                 @error('for')
-                <p class="text-danger fw-bold">{{ $message }}</p>
+                    <p class="text-danger fw-bold">{{ $message }}</p>
                 @enderror
             </div>
             <div class="mb-3 w-25">
                 <label for="des" class="form-label">Dexterity</label>
                 <input type="number" class="form-control" id="des" name="des" value="{{old('des')}}">
+                <button type="button" class="btn btn-primary mt-2" onclick="generateRandomValue('des', 3, 18)">Random ?</button>
                 @error('des')
                 <p class="text-danger fw-bold">{{ $message }}</p>
                 @enderror
@@ -83,30 +86,31 @@
             <div class="mb-3 w-25">
                 <label for="cos" class="form-label">Constitution</label>
                 <input type="number" class="form-control" id="cos" name="cos" value="{{old('cos')}}">
+                <button type="button" class="btn btn-primary mt-2" onclick="generateRandomValue('cos', 3, 18)">Random ?</button>
                 @error('cos')
                 <p class="text-danger fw-bold">{{ $message }}</p>
                 @enderror
             </div>
             <div class="mb-3 w-25">
                 <label for="int" class="form-label">Intelligence</label>
-                <input type="number" class="form-control" id="int" name="int"
-                value="{{old('int')}}">
+                <input type="number" class="form-control" id="int" name="int" value="{{old('int')}}">
+                <button type="button" class="btn btn-primary mt-2" onclick="generateRandomValue('int', 3, 18)">Random ?</button>
                 @error('int')
                 <p class="text-danger fw-bold">{{ $message }}</p>
                 @enderror
             </div>
             <div class="mb-3 w-25">
                 <label for="sag" class="form-label">Wisdom</label>
-                <input type="number" class="form-control" id="sag" name="sag"
-                value="{{old('sag')}}">
+                <input type="number" class="form-control" id="sag" name="sag" value="{{old('sag')}}">
+                <button type="button" class="btn btn-primary mt-2" onclick="generateRandomValue('sag', 3, 18)">Random ?</button>
                 @error('sag')
                 <p class="text-danger fw-bold">{{ $message }}</p>
                 @enderror
             </div>
             <div class="mb-3 w-25">
                 <label for="car" class="form-label">Charisma</label>
-                <input type="number" class="form-control" id="car" name="car"
-                value="{{old('car')}}">
+                <input type="number" class="form-control" id="car" name="car" value="{{old('car')}}">
+                <button type="button" class="btn btn-primary mt-2" onclick="generateRandomValue('car', 3, 18)">Random ?</button>
                 @error('car')
                 <p class="text-danger fw-bold">{{ $message }}</p>
                 @enderror
@@ -142,4 +146,11 @@
 
     </form>
 </div>
+
+<script>
+    function generateRandomValue(fieldName, minValue, maxValue) {
+        var randomValue = Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
+        document.getElementById(fieldName).value = randomValue;
+    }
+</script>
 @endsection
