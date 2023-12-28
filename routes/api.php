@@ -15,4 +15,8 @@ use App\Http\Controllers\Api\PageController;
 |
 */
 Route::get('/characters' , [PageController::class , 'index']);
-Route::post('/send-email', [LeadController::class, 'store']);
+Route::get('/races' , [PageController::class , 'getRaces']);
+Route::get('/skills' , [PageController::class , 'getSkills']);
+Route::get('/characters-by-race/{race_slug}' , [PageController::class , 'getCharacterByRace']);
+Route::get('/characters-by-skill/{skill_slug}' , [PageController::class , 'getCharacterBySkill']);
+Route::get('/characters/get-character/{slug}' , [PageController::class , 'getCharacterBySlug']);
