@@ -22,4 +22,10 @@ class PageController extends Controller
             'character' => $character,
         ]);
     }
+
+    // function to search a character in front-end project
+    public function search($toSearch){
+        $characters = Character::where('name', 'LIKE', '%'.$toSearch . '%')->with('race', 'skills')->paginate(5);
+        return response()->json($characters);
+    }
 }

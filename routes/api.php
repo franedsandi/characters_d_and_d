@@ -15,3 +15,6 @@ use App\Http\Controllers\Api\PageController;
 |
 */
 Route::get('/characters' , [PageController::class , 'index']);
+
+// route to search a character
+Route::get('/search/{toSearch}', [PageController::class, 'search']);
