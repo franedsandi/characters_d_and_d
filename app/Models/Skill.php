@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
 class Skill extends Model
 {
     use HasFactory;
-    public function character(){
+    public function characters(){
         return $this->belongsToMany(Character::class);
     }
 
@@ -23,11 +23,11 @@ class Skill extends Model
     public static function generateSlug($name){
         $slug = Str::slug($name, "-");
         $original_slug = $slug;
-        $exists = Race::where("slug", $slug)->first();
+        $exists = Skill::where("slug", $slug)->first();
         $c = 1;
         while($exists){
             $slug = $original_slug . "-" . $c;
-            $exists = Race::where("slug", $slug)->first();
+            $exists = Skill::where("slug", $slug)->first();
 
             $c++;
         }
