@@ -15,3 +15,4 @@ use App\Http\Controllers\Api\PageController;
 |
 */
 Route::get('/characters' , [PageController::class , 'index']);
+Route::post('/send-email', [LeadController::class, 'store']);
