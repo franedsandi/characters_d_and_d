@@ -5,9 +5,9 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Mail;
 use App\Models\Lead;
 use App\Mail\NewContact;
-use Illuminate\Support\Facades\Mail;
 
 class LeadController extends Controller
 {
@@ -37,17 +37,22 @@ class LeadController extends Controller
         $success = false;
         $errors = $validator->errors();
         return response()->json(compact('success', 'errors'));
-        }
+    }
 
+    // se non ci sono errori:
+
+    // salvo i dati nel db
     $new_lead = new Lead();
     $new_lead->fill($data);
     $new_lead->save();
 
-    Mail::to('dnd@app.com')->send(new NewContact($new_lead));
+    // ivio l'email
+    Mail::to('dnd@info.com')->send(new NewContact($new_lead));
 
 
-    $success=true;
-    return response()->json(compact('success',));
-    }
+    // restituisco success = true
+    $success = true;
+    return response()->json(compact('success'));
+}
 }
 

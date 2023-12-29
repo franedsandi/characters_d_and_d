@@ -1,9 +1,9 @@
 <p>
     you got mail <br>
-    name: {{$lead->name}} <br>
-    email: {{$lead->email}} <br>
-    subject: {{$lead->subject}} <br>
-    message: <br>
+    Name: {{$lead->name}} <br>
+    Email: {{$lead->email}} <br>
+    Subject: {{$lead->subject}} <br>
+    Message: <br>
     {{$lead->message}}
 </p>
 

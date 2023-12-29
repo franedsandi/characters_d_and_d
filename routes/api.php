@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\PageController;
+use App\Http\Controllers\Api\LeadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,5 @@ Route::get('/skills' , [PageController::class , 'getSkills']);
 Route::get('/characters-by-race/{race_slug}' , [PageController::class , 'getCharacterByRace']);
 Route::get('/characters-by-skill/{skill_slug}' , [PageController::class , 'getCharacterBySkill']);
 Route::get('/characters/get-character/{slug}' , [PageController::class , 'getCharacterBySlug']);
+Route::post('/send-email', [LeadController::class, 'store']);
+
