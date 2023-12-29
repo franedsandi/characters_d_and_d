@@ -35,12 +35,13 @@ class PageController extends Controller
     }
 
     public function getCharacterByRace($race_slug){
-        $race = Race::where('slug' , $race_slug)->with('characters')->first();
+        $race = Race::where('slug', $race_slug)->with('characters')->first();
         return response()->json($race);
     }
 
     public function getCharacterBySkill($skill_slug){
-        $skill = Skill::where('slug' , $skill_slug)->with('characters')->first();
+        $skill = Skill::where('slug', $skill_slug)->with('characters')->first();
         return response()->json($skill);
     }
+
 }
