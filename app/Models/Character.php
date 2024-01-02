@@ -16,11 +16,15 @@ class Character extends Model
     public function skills(){
         return $this->belongsToMany(Skill::class);
     }
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 
     protected $fillable = [
         'name',
         'slug',
         'race_id',
+        'user_id',
         'height',
         'weight',
         'background',

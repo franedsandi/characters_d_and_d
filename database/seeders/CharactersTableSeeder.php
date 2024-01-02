@@ -7,6 +7,8 @@ use Illuminate\Database\Seeder;
 use App\Models\Character;
 use Illuminate\Support\Str;
 use App\Models\Race;
+use App\Models\User;
+
 
 class CharactersTableSeeder extends Seeder
 {
@@ -26,6 +28,7 @@ class CharactersTableSeeder extends Seeder
                 $character->name = $characterData['name'];
                 $character->slug = Character::generateSlug($character->name);
                 $character->race_id = $characterData['race_id'];
+                $character->user_id = $characterData['user_id'];
                 $character->height = $characterData['height'];
                 $character->weight = $characterData['weight'];
                 $character->background = $characterData['background'];

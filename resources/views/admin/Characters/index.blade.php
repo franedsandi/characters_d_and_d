@@ -34,8 +34,9 @@
 </div>
 
 <div class="mt-5 d-flex justify-content-center" style="color: white">
-    {{ $characters->appends(request()->query())->links() }}
+    {{ $characters->appends(['search' => $searchTerm])->links() }}
 </div>
+
 
 
 @endsection

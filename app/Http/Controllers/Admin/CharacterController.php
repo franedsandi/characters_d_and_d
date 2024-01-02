@@ -10,6 +10,7 @@ use App\Models\Skill;
 use App\Models\Race;
 use App\Models\Character;
 use App\Http\Requests\CharacterRequest;
+use Illuminate\Support\Facades\Auth;
 
 class CharacterController extends Controller
 {
@@ -20,18 +21,19 @@ class CharacterController extends Controller
      */
     public function index(Request $request)
     {
-
         $searchTerm = $request->input('search');
-        $characters = Character::query();
+
+        $characters = Character::where('user_id', Auth::id());
 
         if ($searchTerm) {
-            $characters = $characters->where('name', 'LIKE', "%$searchTerm%");
+            $characters->where('name', 'LIKE', "%$searchTerm%");
         }
 
         $characters = $characters->orderBy('id', 'desc')->paginate(4);
 
-        return view('admin.Characters.index', compact('characters'));
+        return view('admin.Characters.index', compact('characters', 'searchTerm'));
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -55,6 +57,7 @@ class CharacterController extends Controller
     {
         $form_data = $request->all();
         $form_data['slug'] = Character::generateSlug($form_data['name']);
+        $form_data['user_id'] = Auth::id();
         $new_character = new Character();
         $new_character->fill($form_data);
 
@@ -78,6 +81,9 @@ class CharacterController extends Controller
      */
     public function show(Character $character)
     {
+        if($character->user_id != Auth::id()){
+            return view('errors.404');
+        }
         return view('admin.characters.show', compact('character'));
     }
 
@@ -91,6 +97,10 @@ class CharacterController extends Controller
     {
         $races = Race::all();
         $skills = Skill::all();
+
+        if($character->user_id != Auth::id()){
+            return view('errors.404');
+        }
 
         return view('admin.characters.edit', compact('character', 'races', 'skills'));
     }

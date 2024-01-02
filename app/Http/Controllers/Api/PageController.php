@@ -9,10 +9,11 @@ use App\Models\Race;
 use App\Models\Skill;
 
 
+
 class PageController extends Controller
 {
     public function index(){
-        $characters = Character::with('race', 'skills')->paginate(5);
+        $characters = Character::with('race', 'skills', 'user')->paginate(5);
         return response()->json($characters);
     }
 
