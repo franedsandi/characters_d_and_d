@@ -26,7 +26,7 @@ class PageController extends Controller
         return response()->json($skills);
     }
     public function getCharacterBySlug($slug){
-        $character = Character::where('slug', $slug)->with('race', 'skills')->first();
+        $character = Character::where('slug', $slug)->with('race', 'skills', 'user')->first();
         $success = $character ? true : false;
 
         return response()->json([
