@@ -16,8 +16,9 @@ use App\Http\Controllers\Api\LeadController;
 |
 */
 Route::get('/characters' , [PageController::class , 'index']);
+Route::get('/characters-list', [PageController::class, 'getCharacters']);
 
-// route to search a character
+
 Route::get('/search/{toSearch}', [PageController::class, 'search']);
 Route::get('/races' , [PageController::class , 'getRaces']);
 Route::get('/skills' , [PageController::class , 'getSkills']);

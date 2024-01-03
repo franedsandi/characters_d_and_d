@@ -17,6 +17,11 @@ class PageController extends Controller
         return response()->json($characters);
     }
 
+    public function getCharacters(){
+        $allCharacter =  Character::with('race', 'skills', 'user')->get();
+        return response()->json($allCharacter);
+    }
+
     public function getRaces(){
         $races = Race::all();
         return response()->json($races);
