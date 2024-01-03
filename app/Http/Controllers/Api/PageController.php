@@ -37,7 +37,7 @@ class PageController extends Controller
 
     // function to search a character in front-end project
     public function search($toSearch){
-        $characters = Character::where('name', 'LIKE', '%'.$toSearch . '%')->with('race', 'skills')->paginate(5);
+        $characters = Character::where('name', 'LIKE', '%'.$toSearch . '%')->with('race', 'skills', 'user')->paginate(5);
         return response()->json($characters);
     }
     public function getCharacterByRace($race_slug){
