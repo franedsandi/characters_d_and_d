@@ -39,18 +39,14 @@ class LeadController extends Controller
         return response()->json(compact('success', 'errors'));
     }
 
-    // se non ci sono errori:
 
-    // salvo i dati nel db
     $new_lead = new Lead();
     $new_lead->fill($data);
     $new_lead->save();
 
-    // ivio l'email
     Mail::to('dnd@info.com')->send(new NewContact($new_lead));
 
 
-    // restituisco success = true
     $success = true;
     return response()->json(compact('success'));
 }
