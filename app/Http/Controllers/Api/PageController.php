@@ -13,7 +13,7 @@ use App\Models\Skill;
 class PageController extends Controller
 {
     public function index(){
-        $characters = Character::with('race', 'skills', 'user')->paginate(5);
+        $characters = Character::with('race', 'skills', 'user')->paginate(8);
         return response()->json($characters);
     }
 
@@ -42,7 +42,7 @@ class PageController extends Controller
 
     // function to search a character in front-end project
     public function search($toSearch){
-        $characters = Character::where('name', 'LIKE', '%'.$toSearch . '%')->with('race', 'skills', 'user')->paginate(5);
+        $characters = Character::where('name', 'LIKE', '%'.$toSearch . '%')->with('race', 'skills', 'user')->paginate(8);
         return response()->json($characters);
     }
     public function getCharacterByRace($race_slug){

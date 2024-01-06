@@ -1,151 +1,116 @@
-# Laravel Vite/Bootstrap 5 preset
+# Dungeons and Dragons Character API with Laravel Vite/Bootstrap 5 Preset
 
-**_Attention_**: run this package on fresh laravel applications
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Technologies Used](#technologies-used)
+4. [System Requirements](#system-requirements)
+5. [Project Setup](#project-setup)
+6. [Frontend setup](#frontend-setup)
+6. [Contributions](#contributions)
+8. [Laravel Vite/Bootstrap 5 Preset](#laravel-vite-bootstrap-5-preset)
 
-Install the package by running the composer command
+## Introduction
+
+This repository combines a Dungeons and Dragons (D&D) character API developed with Laravel 10 and a frontend built using JavaScript, Bootstrap 5, Vite, and Sass. Additionally, it includes a Laravel Vite/Bootstrap 5 preset for easy setup.
+
+## Features
+
+- **CRUD Operations for Characters:** The API allows you to Create, Read, Update, and Delete D&D characters.
+  
+- **Intuitive User Interface:** An attractive and user-friendly interface has been implemented to interact with the API.
+
+## Technologies Used
+
+- **Laravel 10:** The backend of the application is built using the popular PHP framework, Laravel, to facilitate the creation and management of the API.
+
+- **JavaScript:** Used to enhance the user experience in the frontend and make asynchronous requests to the API.
+
+- **Bootstrap 5:** The frontend interface is designed using Bootstrap to ensure a responsive and visually appealing design.
+
+- **Vite:** Utilized as a bundler for frontend development, providing a quick and efficient configuration.
+
+- **Sass:** Used for stylesheet preprocessing, maintaining a more organized and modular CSS code.
+
+## System Requirements
+
+- PHP 8.0 or higher
+- Composer
+- Node.js and npm
+- Laravel CLI
+- A database compatible with Laravel (MySQL, PostgreSQL, SQLite, etc.)
+
+## Project Setup
+
+1. Clone the repository: `git clone https://github.com/franedsandi/characters_d_and_d.git`
+
+2. be sure to have a Database destined to the content you this repository creating it on http://localhost/phpMyAdmin/index.php
+
+2. Install backend dependencies: `composer install`
+
+3. Copy the configuration file `.env.example` to `.env` and configure your environment, including the database connection.
+
+4. Generate the application key: `php artisan key:generate`
+
+5. Run migrations: `php artisan migrate`
+
+6. Run `npm install` , and `npm run dev`
+
+7. Start the Laravel server: `php artisan serve`
+
+8. In the browser window register yourself as a new user 
+
+9. Run in a third terminal `php artisan db:seed`
+
+---------------------------------------------------
+At this point you will be able to navigate though the backend site, being able to create new characters, races and abilities, read and edit them aswell, incluiding the default character maded for the first user registered, by the other side, if any other user register in the site, they will not have default characters but they will be able to read and modify the races and abilities being those universal characteristics for every single user registered . its important to know that other users will not be able to read and modify your own characters.
+Note:
+Every user is able to delete their own characters, but they are also be able to delete races and skills. If any race is deleted, all the characters with that race will also be deleted ( race extintion ). If any skill is deleted, all the characters with that skill will forget thet skill ( masive mamory erased).
+---------------------------------------------------
+
+## Frontend setup
+
+1. Clone the repository: `git clone https://github.com/erikvella/front-d-and-d.git`
+
+2. Navigate to the `frontend` folder and run `npm install` to install frontend dependencies.
+
+3. With the Laravel server running, run `npm run dev` to start the Vite development server.
+
+9. Access the application in your browser: `http://localhost:8000`
+
+---------------------------------------------------
+Note:
+In this front end site you will be able to see a contact us space, that will send the messages directly to a my emailtrap account, if you want to modify this, you just need to modify the configuration in env. from this:
+
+    MAIL_MAILER=smtp
+    MAIL_HOST=sandbox.smtp.mailtrap.io
+    MAIL_PORT=2525
+    MAIL_USERNAME=4e509049657262
+    MAIL_PASSWORD=4fc319e533d7b4
+    MAIL_ENCRYPTION=null
+    MAIL_FROM_ADDRESS='dnd@info.com'
+    MAIL_FROM_NAME="${APP_NAME}"
+
+To your personal information. 
+Also dont forget to modify the email in 
+
+app/Http/Controllers/Api/LeadController.php thom this
+    Mail::to('**MAIL_FROM_ADDRESS**')->send(new NewContact($new_lead));
+to your "MAIL_FROM_ADDRESS" used in the env. file
+---------------------------------------------------
+
+## Contributions
+
+Contributions are welcome! If you find any issues or have ideas to improve the application, please open an issue or submit a pull request.
+
+Special thanks to all contributors that took time and effort to make this project a real application.
+
+## Laravel Vite/Bootstrap 5 Preset
+
+**_Attention_**: Run this package on fresh Laravel applications.
+
+Install the package by running the composer command:
 
 ```bash
 composer require pacificdev/laravel_9_preset
 ```
-
-## Bootstrap/Sass/Vite Preset
-
-The following command will do the following tasks:
-
--   remove postcss
--   install bootstrap 5
--   install sass
--   update vite config
--   add a default welcome page.
-
-```bash
-php artisan preset:ui bootstrap
-```
-
-## Laravel Breeze/Bootstrap Authentication Preset
-
-Make sure laravel breeze has been installed and scaffolded using the commands below
-
-```bash
-composer require laravel/breeze --dev
-php artisan breeze:install
-```
-
-Install PacificDev Breeze/Bootstrap Scaffolding
-
-```bash
-php artisan preset:ui bootstrap --auth
-
-```
-
-## Compatibility notes
-
-This package has been tested with both laravel 9.x and 10.x versions.
-However, from laravel v.10.10 the framework includes a `'type': 'module'` property in the package.json file that was not used on previous versions.
-
-### Up to laravel v10.0
-
-Install the package as described in the documentation above, no issues have been reported.
-
-### From Laravel v.10.10 and up
-
-When you install the package following the documentation above and then run `npm run dev` it returns an error due to a `require('path')` used in the `vite.config.js file`.
-
-> If require('path') is replaced with `import path from 'path'` the dev server will return another error, mentioning the laravel() function being undefined. So, the import statement can be updated or not, it won't fix the issue.
-
-To fix the issue you can:
-
--   remove from the laravel package.json file the `"type": "module"`
--   rename the vite.config.js file to `vite.config.cjs`
-
-**please note** this is a temporary solution as in both cases, remove the type:module or renaming the vite config file could trigger other issues. If you face any problem please report it [here](https://github.com/fabiopacificicom/laravel-9-preset/issues)
-
-# To do
-
-## Back End:
-
-- Seed for the database with real character data [DONE] (s-p-branch) (in main)
-- Seed for the database with real skills data [DONE] (f-s-branch) (in main)
-- Seed for the database with real races data [DONE] (partially, only 8 races [they are a bunch]) (f-s-branch) (in main)
-- API with Json data [DONE] (e-v-branch) (in main)
-- add logo and link to public site [DONE] (s-p-branch) (in main)
-
-### CRUD Races:
-- Create [DONE] (s-p-branch) (in main)
-- Read [DONE] (s-p-branch) (in main)
-- Update [DONE] (s-p-branch) (in main)
-- Delete [DONE] (f-s-branch) (in main)
-
-### CRUD Skills:
-- Create [DONE] (p-l-branch) (in main)
-- Read   [DONE] (p-l-branch) (in main)
-- Update [DONE] (p-l-branch) (in main)
-- Delete [DONE] (p-l-branch) (in main)
-
--   Add an image for each race in the database:
-
-    -    Table update for image link loading [DONE] (s-p-branch) (in main)
-    -    Modify the race model to allow image loading [DONE] (s-p-branch) (in main)
-    -    Modify CRUD for images [DONE] (s-p-branch) (in main)
-
--   Page displaying all characters belonging to a specific race [DONE] (f-s-branch) (in main)
--   Modify create and update for characters to include race [DONE] (f-s-branch) (in main)
--   Modify create and update for characters to include skills [DONE] (f-s-branch) (in main)
-
--   Login (users can only see their characters after logging in) [DONE] (f-s-branch) (in main)
--   Login 2.0 (users can see only their characters after logging in) [TODO] (f-s-branch) (on the way)
--   Style modification for login and register with header (view.auth) [DONE] (s-p-branch) (in main)
-
--   Search bar to find user {{generic route}}[DONE] (g-g) (in main)
-    -    Searchbar generic mode [DONE] (f-s-branch) (in main)
-    -    Search bar interaction with paginator [DONE] (f-s-branch) (in main)
--   Contact Us form [DONE]  (f-s-branch) (in main)
-
-## Front End:
-
--   Retrieve character list and individual character pages via API [DONE] (e-v-branch) (in main)
--   Page displaying the list of characters [DONE] (e-v-branch) (in main)
--   Add a search function to find characters [DONE] (s-p-branch) (in main)
--   Page where a random character can be generated by clicking a d20 [TODO] 
-
-### To Fix:
-
--   Image size on the index characters [FIXED] (s-p-branch) (in main)
--   Race cascade delete behavior [FIXED] (f-s-branch) (in main)
--   style of create and edit form characters/form race [FIXED] (s-p-branch)  (in main)
-
-# Completation percent
-
-(31/33) -> 93.94%
-
-# Step by step in order to use this repository
-1. clone repository
-2. use env.exaple as env.
-3. subtitute 
-            DB_CONNECTION=mysql
-            DB_HOST=127.0.0.1
-            DB_PORT=3306
-            DB_DATABASE=characters-d-and-d
-            DB_USERNAME=root
-            DB_PASSWORD=root 
-to your personal information
-4. do the same with 
-            MAIL_MAILER=smtp
-            MAIL_HOST=sandbox.smtp.mailtrap.io
-            MAIL_PORT=2525
-            MAIL_USERNAME=4e509049657262
-            MAIL_PASSWORD=4fc319e533d7b4
-            MAIL_ENCRYPTION=null
-            MAIL_FROM_ADDRESS='dnd@info.com'
-            MAIL_FROM_NAME="${APP_NAME}"
-for the mailer in .env 
-5. also change the email in app/Http/Controllers/Api/LeadController.php
-            Mail::to('dnd@info.com')->send(new NewContact($new_lead));
-            to --->
-            Mail::to('**MAIL_FROM_ADDRESS**')->send(new NewContact($new_lead));
-2. npm i
-3. npm run dev
-4. php artisan serve
-5. php artisan migrate
-6. open the back end side and create a user and start enjoing this Cnd character DB
-7. if you want to use the already made characters, skills and races do php artisan db:seed
