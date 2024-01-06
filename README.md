@@ -61,8 +61,10 @@ This repository combines a Dungeons and Dragons (D&D) character API developed wi
 8. In the browser window register yourself as a new user .
 
 9. Run in a third terminal `php artisan db:seed`.
+
 ---
-    At this point you will be able to navigate though the backend site, being able to create new characters, races and skills, read and edit them aswell, incluiding the default character maded for the first user registered, by the other side, if any other user register in the site, they will not have default characters but they will be able to read and modify the races and skills because those are universal characteristics for every user registered . Its important to know that other users will not be able to read and modify your own characters.
+
+At this point you will be able to navigate though the backend site, being able to create new characters, races and skills, read and edit them aswell, incluiding the default character maded for the first user registered, by the other side, if any other user register in the site, they will not have default characters but they will be able to read and modify the races and skills because those are universal characteristics for every user registered . Its important to know that other users will not be able to read and modify your own characters.
 
 Note:
 
@@ -78,7 +80,9 @@ Note:
 
 3. With the Laravel server running, run `npm run dev` to start the Vite development server.
 
-9. Access the application in your browser: `http://localhost:8000`
+4. Copy the store file `store.js.example` to `store.js` in the data folder.
+
+5. Access the application in your browser: `http://localhost:8000`
 
 ---------------------------------------------------
 
@@ -106,7 +110,11 @@ Note:
 
     to your "MAIL_FROM_ADDRESS" used in the env. file
 
+---------------------------------------------------
 
+Note 2:
+
+    Also is important to remark the the front-end site has been modified to work as mobile first, being compatible to every size of screen with an eficient adaptability
 
 ## Contributions
 
