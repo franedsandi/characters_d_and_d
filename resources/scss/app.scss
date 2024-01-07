@@ -9,6 +9,9 @@ header{
     height: 80px;
     width: 100%;
     z-index: 99;
+    .top, .bottom {
+        width: 200px;
+    }
 }
 main{
     padding-top: 80px;
@@ -16,7 +19,3 @@ main{
     height: 100vh;
 }
 
-
-.debug {
-    border: 1px solid red;
-}
