@@ -82,7 +82,6 @@ Note:
 
 4. Copy the store file `store.js.example` to `store.js` in the data folder.
 
-5. Access the application in your browser: `http://localhost:8000`
 
 ---------------------------------------------------
 
