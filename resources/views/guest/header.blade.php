@@ -1,5 +1,5 @@
-<header class="bg-dark">
-    <nav class="container d-flex align-items-center justify-content-between navbar-dark h-100">
+
+    <nav class="container d-flex align-items-center justify-content-between navbar-dark p-3">
         <a href="{{ route('home')}}" target="_blank" class="navbar-brand p-1">
             <i class="fa-solid fa-circle-arrow-left"></i>
             <h2>Welcome to the public site</h2>
@@ -8,20 +8,20 @@
             <div class="d-flex gap-3">
                 @guest
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    <a class="nav-link text-white" href="{{ route('login') }}">{{ __('Login') }}</a>
                 </li>
                 @if (Route::has('register'))
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
                 </li>
                 @endif
                 @else
-                <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                <li class="nav-item dropdown ">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ url('profile') }}">{{__('Profile')}}</a>
+                        <a class="dropdown-item " href="{{ url('profile') }}">{{__('Profile')}}</a>
                         <a class="dropdown-item" href="{{ route('admin.home') }}">
                             Go to admin site
                         </a>

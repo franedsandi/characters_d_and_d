@@ -38,20 +38,17 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav-s me-auto">
+                <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
+
+                    <ul class="d-flex align-items-center justify-content-between m-0 w-100 list-unstyled">
+                        <!-- Left Side Of Navbar -->
                         <li class="nav-item">
                             <a class="nav-link border p-1 rounded" href="{{url('/') }}">
                                 <i class="fa-solid fa-arrow-left"></i>
-                                {{ __('public site') }}
+                                {{ __('Public site') }}
                             </a>
                         </li>
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav-s ml-auto">
-                        <!-- Authentication Links -->
+                        <!-- Right Side Of Navbar -->
                         @guest
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -71,7 +68,7 @@
                                 <a class="dropdown-item" href="{{ url('dashboard') }}">{{__('Dashboard')}}</a>
                                 <a class="dropdown-item" href="{{ url('profile') }}">{{__('Profile')}}</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                                                    document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
@@ -86,7 +83,7 @@
             </div>
         </nav>
 
-        <main class="">
+        <main class="m-0 p-0">
             @yield('content')
         </main>
     </div>
