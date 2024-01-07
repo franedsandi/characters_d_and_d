@@ -48,6 +48,8 @@
                                 {{ __('Public site') }}
                             </a>
                         </li>
+                    </ul>
+                    <ul class="d-flex list-unstyled gap-3">
                         <!-- Right Side Of Navbar -->
                         @guest
                         <li class="nav-item">
