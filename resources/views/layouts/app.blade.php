@@ -22,9 +22,9 @@
     @vite(['resources/js/app.js'])
 </head>
 
-<body>
-    <div id="app">
-
+<body h-100>
+    <main class="m-0 p-0">
+        <div id="app">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
@@ -85,7 +85,7 @@
             </div>
         </nav>
 
-        <main class="m-0 p-0">
+
             @yield('content')
         </main>
     </div>
