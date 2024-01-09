@@ -56,15 +56,15 @@ This repository combines a Dungeons and Dragons (D&D) character API developed wi
 
 6. Run `npm install` , and `npm run dev`.
 
-7. Start the Laravel server: `php artisan serve`.
+7. Run in terminal `php artisan db:seed`.
 
-8. In the browser window register yourself as a new user .
+8. Start the Laravel server: `php artisan serve`.
 
-9. Run in a third terminal `php artisan db:seed`.
+
 
 ---
 
-At this point you will be able to navigate though the backend site, being able to create new characters, races and skills, read and edit them aswell, incluiding the default character maded for the first user registered, by the other side, if any other user register in the site, they will not have default characters but they will be able to read and modify the races and skills because those are universal characteristics for every user registered . Its important to know that other users will not be able to read and modify your own characters.
+At this point you will be able to navigate though the backend site, being able to create new characters, races and skills, read and edit them aswell, every user will be able to read and modify the races and skills because those are universal characteristics for every character. Its important to know that other users will not be able to read and modify your own characters.
 
 Note:
 
