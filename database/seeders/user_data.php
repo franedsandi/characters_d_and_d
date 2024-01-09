@@ -1,8 +1,8 @@
 <?php
     $users = [
         [
-            'name' => 'google',
-            'email' => 'google@gmail.com',
+            'name' => 'AI',
+            'email' => 'dnd@info.com',
             'password' => '11111111',
         ]
     ];
